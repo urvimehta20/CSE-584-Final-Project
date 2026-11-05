@@ -1,0 +1,11 @@
+question,n_reports,n_queries,n_gold_chunks_ge2,n_queries_zero_gold,dropped
+Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?,1,1,0,1,True
+Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ,1,1,1,0,False
+Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?,1,1,3,0,False
+Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?,1,1,11,0,False
+Does the company report a strategy and activities to significantly reduce water consumption and pollution?,1,1,27,0,False
+Does the company report policies and guidelines in place to ensure employees uphold the principle of ‘Do no significant harm’ across business activities?,1,1,0,1,True
+Does the company report the assets and revenue streams at risk of losing value due to climate change?,1,1,0,1,True
+Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?,1,1,4,0,False
+Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or …to make its value chain more resilient to the impacts of climate change?),1,1,16,0,False
+What are Scope 1 emissions?,1,1,0,1,True

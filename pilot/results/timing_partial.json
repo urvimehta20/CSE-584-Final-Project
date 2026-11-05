@@ -1,0 +1,1059 @@
+{
+  "n_queries_timed": 1000,
+  "warmup": 20,
+  "real_corpus_size": 8464,
+  "settings": [
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "thread_control": {
+        "requested_threads": 1,
+        "threadpoolctl": true,
+        "torch_num_threads": 1,
+        "faiss_threads": 1
+      },
+      "latency_ms": {
+        "median": 0.06616697646677494,
+        "p95": 0.0784482108429074,
+        "mean": 0.06841816246742383,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.05,
+      "subset_size": 423,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.004832982085645199,
+        "p95": 0.005082983989268541,
+        "mean": 0.004822727758437395,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.1,
+      "subset_size": 846,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.006040965672582388,
+        "p95": 0.00637496414128691,
+        "mean": 0.00616375170648098,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.25,
+      "subset_size": 2116,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.01033296575769782,
+        "p95": 0.011041993275284767,
+        "mean": 0.010327542724553496,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.5,
+      "subset_size": 4232,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.01752050593495369,
+        "p95": 0.018167018424719572,
+        "mean": 0.0171518754796125,
+        "n": 1000
+      }
+    },
+    {
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 32,
+      "N": 8464,
+      "build_ms": 320.7467499887571,
+      "status": "ok",
+      "latency_ms": {
+        "median": 0.024604523787274957,
+        "p95": 0.03187913389410823,
+        "mean": 0.024716774409171194,
+        "n": 1000
+      },
+      "filtered": false,
+      "selectivity": 1.0,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1
+    },
+    {
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 128,
+      "N": 8464,
+      "build_ms": 320.7467499887571,
+      "status": "ok",
+      "latency_ms": {
+        "median": 0.08025002898648381,
+        "p95": 0.09758299274835736,
+        "mean": 0.07989491982152686,
+        "n": 1000
+      },
+      "filtered": false,
+      "selectivity": 1.0,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "single_thread",
+      "n_threads": 1
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "thread_control": {
+        "requested_threads": 1,
+        "threadpoolctl": true,
+        "torch_num_threads": 1,
+        "faiss_threads": 1
+      },
+      "latency_ms": {
+        "median": 2.146062528481707,
+        "p95": 2.328100029262714,
+        "mean": 2.1729612328344956,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.05,
+      "subset_size": 5000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.019958504708483815,
+        "p95": 0.020666042109951377,
+        "mean": 0.019341462466400117,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.1,
+      "subset_size": 10000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.12181251076981425,
+        "p95": 0.13688326871488243,
+        "mean": 0.12485215900233015,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.25,
+      "subset_size": 25000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.5420415254775435,
+        "p95": 0.6269642821280286,
+        "mean": 0.5503049735561945,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.5,
+      "subset_size": 50000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 1.0757505078800023,
+        "p95": 1.242695774999447,
+        "mean": 1.0997940594679676,
+        "n": 1000
+      }
+    },
+    {
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 32,
+      "N": 100000,
+      "build_ms": 7813.810291991103,
+      "status": "ok",
+      "latency_ms": {
+        "median": 0.025374989490956068,
+        "p95": 0.044236003304831656,
+        "mean": 0.027116807061247528,
+        "n": 1000
+      },
+      "filtered": false,
+      "selectivity": 1.0,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1
+    },
+    {
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 128,
+      "N": 100000,
+      "build_ms": 7813.810291991103,
+      "status": "ok",
+      "latency_ms": {
+        "median": 0.11706200893968344,
+        "p95": 0.20102711569052187,
+        "mean": 0.12364188820356503,
+        "n": 1000
+      },
+      "filtered": false,
+      "selectivity": 1.0,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "single_thread",
+      "n_threads": 1
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "thread_control": {
+        "requested_threads": 1,
+        "threadpoolctl": true,
+        "torch_num_threads": 1,
+        "faiss_threads": 1
+      },
+      "latency_ms": {
+        "median": 21.82027100934647,
+        "p95": 23.000760085415095,
+        "mean": 22.06327299895929,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.05,
+      "subset_size": 50000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 1.0768540378194302,
+        "p95": 1.229539592168294,
+        "mean": 1.0978827164508402,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.1,
+      "subset_size": 100000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 2.1471669897437096,
+        "p95": 2.356058362056501,
+        "mean": 2.1776291254209355,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.25,
+      "subset_size": 250000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 5.402792012318969,
+        "p95": 5.638880960759707,
+        "mean": 5.546255080786068,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.5,
+      "subset_size": 500000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 10.91527150128968,
+        "p95": 11.215215222910047,
+        "mean": 10.943347998487297,
+        "n": 1000
+      }
+    },
+    {
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 32,
+      "N": 1000000,
+      "build_ms": 71223.07545802323,
+      "status": "ok",
+      "latency_ms": {
+        "median": 0.022374966647475958,
+        "p95": 0.04492324078455567,
+        "mean": 0.02574112918227911,
+        "n": 1000
+      },
+      "filtered": false,
+      "selectivity": 1.0,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1
+    },
+    {
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 128,
+      "N": 1000000,
+      "build_ms": 71223.07545802323,
+      "status": "ok",
+      "latency_ms": {
+        "median": 0.08085448644123971,
+        "p95": 0.1609919971087947,
+        "mean": 0.08898550021694973,
+        "n": 1000
+      },
+      "filtered": false,
+      "selectivity": 1.0,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "single_thread",
+      "n_threads": 1
+    },
+    {
+      "status": "ok",
+      "method": "topic_scoring_overhead",
+      "n_nodes": 18,
+      "N": null,
+      "synthetic": false,
+      "threads": "single_thread",
+      "n_threads": 1,
+      "latency_ms": {
+        "median": 0.0017919810488820076,
+        "p95": 0.0019169528968632221,
+        "mean": 0.00177751702722162,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "thread_control": {
+        "requested_threads": 10,
+        "threadpoolctl": true,
+        "torch_num_threads": 10,
+        "faiss_threads": 10
+      },
+      "latency_ms": {
+        "median": 0.05979201523587108,
+        "p95": 0.06929523660801351,
+        "mean": 0.06173253239830956,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.05,
+      "subset_size": 423,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.004708999767899513,
+        "p95": 0.004916975740343332,
+        "mean": 0.0046984454384073615,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.1,
+      "subset_size": 846,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.005999987479299307,
+        "p95": 0.006416987162083387,
+        "mean": 0.0060503106215037405,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.25,
+      "subset_size": 2116,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.010124989785254002,
+        "p95": 0.010582970571704209,
+        "mean": 0.010054650658275932,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.5,
+      "subset_size": 4232,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.01745900954119861,
+        "p95": 0.18783122650347642,
+        "mean": 0.03550251718843356,
+        "n": 1000
+      }
+    },
+    {
+      "status": "failed",
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 32,
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "error": "Skipped FAISS HNSW for all_threads N=8464: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+    },
+    {
+      "status": "failed",
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 128,
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 8464,
+      "synthetic": false,
+      "label": "real_N=8464",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "error": "Skipped FAISS HNSW for all_threads N=8464: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "thread_control": {
+        "requested_threads": 10,
+        "threadpoolctl": true,
+        "torch_num_threads": 10,
+        "faiss_threads": 10
+      },
+      "latency_ms": {
+        "median": 2.1503749885596335,
+        "p95": 2.3384496482321993,
+        "mean": 2.1756131837610155,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.05,
+      "subset_size": 5000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.020291481632739305,
+        "p95": 0.02120806893799454,
+        "mean": 0.01962105295388028,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.1,
+      "subset_size": 10000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.11133297812193632,
+        "p95": 0.1314663386438042,
+        "mean": 0.11513839766848832,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.25,
+      "subset_size": 25000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.5395000334829092,
+        "p95": 0.5982077214866877,
+        "mean": 0.5485147900180891,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.5,
+      "subset_size": 50000,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 1.0734374809544533,
+        "p95": 1.2294288433622569,
+        "mean": 1.095239580841735,
+        "n": 1000
+      }
+    },
+    {
+      "status": "failed",
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 32,
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "error": "Skipped FAISS HNSW for all_threads N=100000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+    },
+    {
+      "status": "failed",
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 128,
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 100000,
+      "synthetic": true,
+      "label": "synthetic_N=100000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "error": "Skipped FAISS HNSW for all_threads N=100000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "thread_control": {
+        "requested_threads": 10,
+        "threadpoolctl": true,
+        "torch_num_threads": 10,
+        "faiss_threads": 10
+      },
+      "latency_ms": {
+        "median": 21.803458483191207,
+        "p95": 23.324897279962894,
+        "mean": 21.986892884538975,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.05,
+      "subset_size": 50000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 1.0785204940475523,
+        "p95": 1.2495271250372753,
+        "mean": 1.1061697180266492,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.1,
+      "subset_size": 100000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 2.1461040305439383,
+        "p95": 2.3249160643899813,
+        "mean": 2.172146921569947,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.25,
+      "subset_size": 250000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 5.395416490500793,
+        "p95": 5.702905901125631,
+        "mean": 5.450848474749364,
+        "n": 1000
+      }
+    },
+    {
+      "status": "ok",
+      "method": "exact_numpy_matmul",
+      "filtered": true,
+      "selectivity": 0.5,
+      "subset_size": 500000,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 10.943957982817665,
+        "p95": 12.03632674005348,
+        "mean": 11.192798535746988,
+        "n": 1000
+      }
+    },
+    {
+      "status": "failed",
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 32,
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "error": "Skipped FAISS HNSW for all_threads N=1000000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+    },
+    {
+      "status": "failed",
+      "method": "faiss_hnsw",
+      "M": 32,
+      "efSearch": 128,
+      "filtered": false,
+      "selectivity": 1.0,
+      "N": 1000000,
+      "synthetic": true,
+      "label": "synthetic_N=1000000",
+      "threads": "all_threads",
+      "n_threads": 10,
+      "error": "Skipped FAISS HNSW for all_threads N=1000000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+    },
+    {
+      "status": "ok",
+      "method": "topic_scoring_overhead",
+      "n_nodes": 18,
+      "N": null,
+      "synthetic": false,
+      "threads": "all_threads",
+      "n_threads": 10,
+      "latency_ms": {
+        "median": 0.0018749851733446121,
+        "p95": 0.0019579892978072166,
+        "mean": 0.0018253293819725513,
+        "n": 1000
+      }
+    }
+  ],
+  "savings_filtered_vs_unfiltered_exact": [
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "single_thread",
+      "selectivity": 0.05,
+      "unfiltered_median_ms": 0.06616697646677494,
+      "filtered_median_ms": 0.004832982085645199,
+      "saving_ms": 0.06133399438112974,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "single_thread",
+      "selectivity": 0.1,
+      "unfiltered_median_ms": 0.06616697646677494,
+      "filtered_median_ms": 0.006040965672582388,
+      "saving_ms": 0.06012601079419255,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "single_thread",
+      "selectivity": 0.25,
+      "unfiltered_median_ms": 0.06616697646677494,
+      "filtered_median_ms": 0.01033296575769782,
+      "saving_ms": 0.05583401070907712,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "single_thread",
+      "selectivity": 0.5,
+      "unfiltered_median_ms": 0.06616697646677494,
+      "filtered_median_ms": 0.01752050593495369,
+      "saving_ms": 0.04864647053182125,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.05,
+      "unfiltered_median_ms": 2.146062528481707,
+      "filtered_median_ms": 0.019958504708483815,
+      "saving_ms": 2.126104023773223,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.1,
+      "unfiltered_median_ms": 2.146062528481707,
+      "filtered_median_ms": 0.12181251076981425,
+      "saving_ms": 2.0242500177118927,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.25,
+      "unfiltered_median_ms": 2.146062528481707,
+      "filtered_median_ms": 0.5420415254775435,
+      "saving_ms": 1.6040210030041635,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.5,
+      "unfiltered_median_ms": 2.146062528481707,
+      "filtered_median_ms": 1.0757505078800023,
+      "saving_ms": 1.0703120206017047,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.05,
+      "unfiltered_median_ms": 21.82027100934647,
+      "filtered_median_ms": 1.0768540378194302,
+      "saving_ms": 20.74341697152704,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.1,
+      "unfiltered_median_ms": 21.82027100934647,
+      "filtered_median_ms": 2.1471669897437096,
+      "saving_ms": 19.67310401960276,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.25,
+      "unfiltered_median_ms": 21.82027100934647,
+      "filtered_median_ms": 5.402792012318969,
+      "saving_ms": 16.4174789970275,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "single_thread",
+      "selectivity": 0.5,
+      "unfiltered_median_ms": 21.82027100934647,
+      "filtered_median_ms": 10.91527150128968,
+      "saving_ms": 10.90499950805679,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "all_threads",
+      "selectivity": 0.05,
+      "unfiltered_median_ms": 0.05979201523587108,
+      "filtered_median_ms": 0.004708999767899513,
+      "saving_ms": 0.05508301546797156,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "all_threads",
+      "selectivity": 0.1,
+      "unfiltered_median_ms": 0.05979201523587108,
+      "filtered_median_ms": 0.005999987479299307,
+      "saving_ms": 0.05379202775657177,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "all_threads",
+      "selectivity": 0.25,
+      "unfiltered_median_ms": 0.05979201523587108,
+      "filtered_median_ms": 0.010124989785254002,
+      "saving_ms": 0.049667025450617075,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 8464,
+      "synthetic": false,
+      "threads": "all_threads",
+      "selectivity": 0.5,
+      "unfiltered_median_ms": 0.05979201523587108,
+      "filtered_median_ms": 0.01745900954119861,
+      "saving_ms": 0.042333005694672465,
+      "exceeds_1ms": false
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.05,
+      "unfiltered_median_ms": 2.1503749885596335,
+      "filtered_median_ms": 0.020291481632739305,
+      "saving_ms": 2.130083506926894,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.1,
+      "unfiltered_median_ms": 2.1503749885596335,
+      "filtered_median_ms": 0.11133297812193632,
+      "saving_ms": 2.039042010437697,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.25,
+      "unfiltered_median_ms": 2.1503749885596335,
+      "filtered_median_ms": 0.5395000334829092,
+      "saving_ms": 1.6108749550767243,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 100000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.5,
+      "unfiltered_median_ms": 2.1503749885596335,
+      "filtered_median_ms": 1.0734374809544533,
+      "saving_ms": 1.0769375076051801,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.05,
+      "unfiltered_median_ms": 21.803458483191207,
+      "filtered_median_ms": 1.0785204940475523,
+      "saving_ms": 20.724937989143655,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.1,
+      "unfiltered_median_ms": 21.803458483191207,
+      "filtered_median_ms": 2.1461040305439383,
+      "saving_ms": 19.65735445264727,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.25,
+      "unfiltered_median_ms": 21.803458483191207,
+      "filtered_median_ms": 5.395416490500793,
+      "saving_ms": 16.408041992690414,
+      "exceeds_1ms": true
+    },
+    {
+      "N": 1000000,
+      "synthetic": true,
+      "threads": "all_threads",
+      "selectivity": 0.5,
+      "unfiltered_median_ms": 21.803458483191207,
+      "filtered_median_ms": 10.943957982817665,
+      "saving_ms": 10.859500500373542,
+      "exceeds_1ms": true
+    }
+  ],
+  "failures": [
+    "Skipped FAISS HNSW for all_threads N=8464: a previous all-threads HNSW run aborted this process with a native segfault (exit 139).",
+    "Skipped FAISS HNSW for all_threads N=100000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139).",
+    "Skipped FAISS HNSW for all_threads N=1000000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+  ],
+  "partial": true
+}

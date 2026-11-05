@@ -1,0 +1,366 @@
+[
+  {
+    "path": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Report-Level Dataset/ClimRetrieve_ReportLevel_V1.csv",
+    "exists": true,
+    "bytes": 80375540,
+    "tables": [
+      {
+        "table": "csv",
+        "n_rows": 47941,
+        "n_cols": 8,
+        "columns": [
+          "Unnamed: 0",
+          "paragraph",
+          "report",
+          "question",
+          "relevant_text",
+          "relevance",
+          "relevant_text_sim",
+          "sim_text_relevance"
+        ],
+        "dtypes": {
+          "Unnamed: 0": "int64",
+          "paragraph": "object",
+          "report": "object",
+          "question": "object",
+          "relevant_text": "object",
+          "relevance": "float64",
+          "relevant_text_sim": "float64",
+          "sim_text_relevance": "float64"
+        },
+        "null_counts": {
+          "Unnamed: 0": 0,
+          "paragraph": 15,
+          "report": 0,
+          "question": 0,
+          "relevant_text": 3743,
+          "relevance": 9,
+          "relevant_text_sim": 0,
+          "sim_text_relevance": 2562
+        },
+        "sample_rows": [
+          {
+            "Unnamed: 0": 0,
+            "paragraph": "2022 Environmental Sustainability ReportEnabling sustainability for our company, our customers, and the world",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "relevant_text": "As a global technology leader, we are also committed to helping build the enabling societal conditions that will support a net zero economy.",
+            "relevance": 0.0,
+            "relevant_text_sim": 0.297188755,
+            "sim_text_relevance": 3.0
+          },
+          {
+            "Unnamed: 0": 1,
+            "paragraph": "Color PaletteNames are TBCContentsOverview  Foreword  42022 progress  7How we work  8About this report  9Microsoft  sustainabilityCarbon  Our approach  11Reducing Scope 1 and 2 emissions  15Reducing Scope 3 emissions  17Transitioning to carbon-free energy  20Removing carbon  22Key trends and what\u2019s next  24Water  Our approach  26Reducing our water footprint  30Replenishing water  33Improving access to water  34Key trends and what\u2019s next  35Waste  Our approach  37Reducing our waste footprint  41Key trends and what\u2019s next  44Ecosystems  Our approach  46Taking responsibility for  our land footprint  48Key trends and what\u2019s next  50Customer sustainability Commitments and progress  53Microsoft Cloud for Sustainability  54Green software  56Sustainable devices  59Planetary Computer and AI for Good  63Global sustainability  Commitments and progress  66Science and research  67Climate Innovation Fund  70Policy and advocacy  72Strategic partnerships  74Employee engagement  and green skilling  76Appendix  Appendix A \u2013 How we report  79Appendix B \u2013 Endnotes  801.4M  We contracted 1,443,",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "relevant_text": "As a global technology leader, we are also committed to helping build the enabling societal conditions that will support a net zero economy.",
+            "relevance": 0.0,
+            "relevant_text_sim": 0.2898550725,
+            "sim_text_relevance": 3.0
+          },
+          {
+            "Unnamed: 0": 2,
+            "paragraph": "4M  We contracted 1,443,981 metric tons of carbon removal in FY22.12,159We diverted 12,159 metric tons of solid waste from landfills and incinerators across our direct operational footprint in FY22.1MWe reached just under one million people with clean water and sanitation solutions by the end of the calendar year 2022.12,270In FY22, we protected 12,270 acres of land in Belize. Another 4,998 acres in the United States is contracted.>600MSince its inception, Microsoft has allocated over $600 million of impact investment capital from our Climate Innovation Fund.2 |  |  |",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "relevant_text": "In response to the UN Secretary-General's call to action to develop early warning systems for all within the next five years, Microsoft joined global leaders in support of this initiative while highlighting the fundamental role that technology can play in these efforts.",
+            "relevance": 0.0,
+            "relevant_text_sim": 0.3189655172,
+            "sim_text_relevance": 3.0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Report-Level Dataset/Intermediate_Steps_Data/report_level_data_final_test.csv",
+    "exists": true,
+    "bytes": 2024703,
+    "tables": [
+      {
+        "table": "csv",
+        "n_rows": 1152,
+        "n_cols": 8,
+        "columns": [
+          "Unnamed: 0",
+          "paragraph",
+          "report",
+          "question",
+          "relevant_text",
+          "relevance",
+          "relevant_text_sim",
+          "sim_text_relevance"
+        ],
+        "dtypes": {
+          "Unnamed: 0": "int64",
+          "paragraph": "object",
+          "report": "object",
+          "question": "object",
+          "relevant_text": "object",
+          "relevance": "int64",
+          "relevant_text_sim": "float64",
+          "sim_text_relevance": "int64"
+        },
+        "null_counts": {
+          "Unnamed: 0": 0,
+          "paragraph": 0,
+          "report": 0,
+          "question": 0,
+          "relevant_text": 0,
+          "relevance": 0,
+          "relevant_text_sim": 0,
+          "sim_text_relevance": 0
+        },
+        "sample_rows": [
+          {
+            "Unnamed: 0": 0,
+            "paragraph": "2022 Environmental Sustainability ReportEnabling sustainability for our company, our customers, and the world",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "relevant_text": "As a global technology leader, we are also committed to helping build the enabling societal conditions that will support a net zero economy.",
+            "relevance": 0,
+            "relevant_text_sim": 0.297188755,
+            "sim_text_relevance": 3
+          },
+          {
+            "Unnamed: 0": 1,
+            "paragraph": "Color PaletteNames are TBCContentsOverview  Foreword  42022 progress  7How we work  8About this report  9Microsoft  sustainabilityCarbon  Our approach  11Reducing Scope 1 and 2 emissions  15Reducing Scope 3 emissions  17Transitioning to carbon-free energy  20Removing carbon  22Key trends and what\u2019s next  24Water  Our approach  26Reducing our water footprint  30Replenishing water  33Improving access to water  34Key trends and what\u2019s next  35Waste  Our approach  37Reducing our waste footprint  41Key trends and what\u2019s next  44Ecosystems  Our approach  46Taking responsibility for  our land footprint  48Key trends and what\u2019s next  50Customer sustainability Commitments and progress  53Microsoft Cloud for Sustainability  54Green software  56Sustainable devices  59Planetary Computer and AI for Good  63Global sustainability  Commitments and progress  66Science and research  67Climate Innovation Fund  70Policy and advocacy  72Strategic partnerships  74Employee engagement  and green skilling  76Appendix  Appendix A \u2013 How we report  79Appendix B \u2013 Endnotes  801.4M  We contracted 1,443,",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "relevant_text": "As a global technology leader, we are also committed to helping build the enabling societal conditions that will support a net zero economy.",
+            "relevance": 0,
+            "relevant_text_sim": 0.2898550725,
+            "sim_text_relevance": 3
+          },
+          {
+            "Unnamed: 0": 2,
+            "paragraph": "4M  We contracted 1,443,981 metric tons of carbon removal in FY22.12,159We diverted 12,159 metric tons of solid waste from landfills and incinerators across our direct operational footprint in FY22.1MWe reached just under one million people with clean water and sanitation solutions by the end of the calendar year 2022.12,270In FY22, we protected 12,270 acres of land in Belize. Another 4,998 acres in the United States is contracted.>600MSince its inception, Microsoft has allocated over $600 million of impact investment capital from our Climate Innovation Fund.2 |  |  |",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "relevant_text": "In response to the UN Secretary-General's call to action to develop early warning systems for all within the next five years, Microsoft joined global leaders in support of this initiative while highlighting the fundamental role that technology can play in these efforts.",
+            "relevance": 0,
+            "relevant_text_sim": 0.3189655172,
+            "sim_text_relevance": 3
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Report-Level Dataset/Intermediate_Steps_Data/report_level_data_test.csv",
+    "exists": true,
+    "bytes": 6564318,
+    "tables": [
+      {
+        "table": "csv",
+        "n_rows": 4770,
+        "n_cols": 4,
+        "columns": [
+          "Unnamed: 0",
+          "paragraph",
+          "report",
+          "question"
+        ],
+        "dtypes": {
+          "Unnamed: 0": "int64",
+          "paragraph": "object",
+          "report": "object",
+          "question": "object"
+        },
+        "null_counts": {
+          "Unnamed: 0": 0,
+          "paragraph": 0,
+          "report": 0,
+          "question": 0
+        },
+        "sample_rows": [
+          {
+            "Unnamed: 0": 0,
+            "paragraph": "2022 Environmental Sustainability ReportEnabling sustainability for our company, our customers, and the world",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?"
+          },
+          {
+            "Unnamed: 0": 1,
+            "paragraph": "Color PaletteNames are TBCContentsOverview  Foreword  42022 progress  7How we work  8About this report  9Microsoft  sustainabilityCarbon  Our approach  11Reducing Scope 1 and 2 emissions  15Reducing Scope 3 emissions  17Transitioning to carbon-free energy  20Removing carbon  22Key trends and what\u2019s next  24Water  Our approach  26Reducing our water footprint  30Replenishing water  33Improving access to water  34Key trends and what\u2019s next  35Waste  Our approach  37Reducing our waste footprint  41Key trends and what\u2019s next  44Ecosystems  Our approach  46Taking responsibility for  our land footprint  48Key trends and what\u2019s next  50Customer sustainability Commitments and progress  53Microsoft Cloud for Sustainability  54Green software  56Sustainable devices  59Planetary Computer and AI for Good  63Global sustainability  Commitments and progress  66Science and research  67Climate Innovation Fund  70Policy and advocacy  72Strategic partnerships  74Employee engagement  and green skilling  76Appendix  Appendix A \u2013 How we report  79Appendix B \u2013 Endnotes  801.4M  We contracted 1,443,",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?"
+          },
+          {
+            "Unnamed: 0": 2,
+            "paragraph": "4M  We contracted 1,443,981 metric tons of carbon removal in FY22.12,159We diverted 12,159 metric tons of solid waste from landfills and incinerators across our direct operational footprint in FY22.1MWe reached just under one million people with clean water and sanitation solutions by the end of the calendar year 2022.12,270In FY22, we protected 12,270 acres of land in Belize. Another 4,998 acres in the United States is contracted.>600MSince its inception, Microsoft has allocated over $600 million of impact investment capital from our Climate Innovation Fund.2 |  |  |",
+            "report": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Expert-Annotated Relevant Sources Dataset/ClimRetrieve_base.xlsx",
+    "exists": true,
+    "bytes": 193122,
+    "tables": [
+      {
+        "table": "Sheet1",
+        "n_rows": 681,
+        "n_cols": 12,
+        "columns": [
+          "Unnamed: 0",
+          "Document",
+          "Question",
+          "Context",
+          "Relevant",
+          "Page",
+          "Source From",
+          "Answer",
+          "Source Relevance Score",
+          "Unsure Flag",
+          "Addressed Directly",
+          "Core 16 Question"
+        ],
+        "dtypes": {
+          "Unnamed: 0": "int64",
+          "Document": "object",
+          "Question": "object",
+          "Context": "object",
+          "Relevant": "object",
+          "Page": "object",
+          "Source From": "object",
+          "Answer": "object",
+          "Source Relevance Score": "float64",
+          "Unsure Flag": "object",
+          "Addressed Directly": "object",
+          "Core 16 Question": "int64"
+        },
+        "null_counts": {
+          "Unnamed: 0": 0,
+          "Document": 0,
+          "Question": 0,
+          "Context": 32,
+          "Relevant": 19,
+          "Page": 22,
+          "Source From": 0,
+          "Answer": 0,
+          "Source Relevance Score": 18,
+          "Unsure Flag": 630,
+          "Addressed Directly": 0,
+          "Core 16 Question": 0
+        },
+        "sample_rows": [
+          {
+            "Unnamed: 0": 0,
+            "Document": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "Question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "Context": "We have also engaged and supported the drive to increase the circularity of devices, boost transparency and efficiency in waste management policies, and empower consumers with better information. Globally, Microsoft advocated for public policies to accelerate climate action; invest in mitigation, adaptation, and a just transition; and align international climate reporting and disclosure rules. At COP27, Microsoft called on countries to remain committed to the target of limiting global warming to 1.5\u00b0C. In response to the UN Secretary-General's call to action to develop early warning systems for all within the next five years, Microsoft joined global leaders in support of this initiative while highlighting the fundamental role that technology can play in these efforts. \nSharing principles that guide our policy work in carbon and electricity \nTo support our policy work, we published briefs on carbon and electricity policy to share the priorities and principles that guide Microsoft's policy advocacy work around the world.",
+            "Relevant": "In response to the UN Secretary-General's call to action to develop early warning systems for all within the next five years, Microsoft joined global leaders in support of this initiative while highlighting the fundamental role that technology can play in these efforts.",
+            "Page": 72,
+            "Source From": "text",
+            "Answer": "[YES]. Microsoft's environmental targets reference external climate change adaptation targets, such as achieving a net zero economy and developing early warning systems. ",
+            "Source Relevance Score": 3.0,
+            "Unsure Flag": null,
+            "Addressed Directly": "directly",
+            "Core 16 Question": 1
+          },
+          {
+            "Unnamed: 0": 1,
+            "Document": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "Question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+            "Context": "Microsoft\u2019s actions alone will not solve the climate crisis. As a global technology leader, we are also committed to helping build the enabling societal conditions that will support a net zero economy. We\u2019re focused on accelerating the availability of new climate technologies, strengthening our climate policy agenda, helping to develop a more reliable and interoperable carbon accounting system, advocating for skilling programs to expand the green workforce, and working to enable a just energy transition.",
+            "Relevant": "As a global technology leader, we are also committed to helping build the enabling societal conditions that will support a net zero economy.",
+            "Page": 65,
+            "Source From": "text",
+            "Answer": "[YES]. Microsoft's environmental targets reference external climate change adaptation targets, such as achieving a net zero economy and developing early warning systems. ",
+            "Source Relevance Score": 3.0,
+            "Unsure Flag": null,
+            "Addressed Directly": "directly",
+            "Core 16 Question": 1
+          },
+          {
+            "Unnamed: 0": 17,
+            "Document": "2022 Microsoft Environmental Sustainability Report.pdf",
+            "Question": "Does the company have a strategy on waste management?",
+            "Context": "Reducing our waste footprint \nTo meet our commitment to being zero waste by 2030, we are reducing, reusing, and recovering waste in our campuses and datacenters. \nWe are focused on keeping our products and packaging in use longer. Reducing waste in our cloud hardware A critical piece of achieving our zero waste goal is managing cloud hardware at our growing fleet of datacenters. We have taken an innovative approach towards designing and implementing circularity into our datacenters by launching Circular Centers to optimize reuse",
+            "Relevant": "To meet our commitment to being zero waste by 2030, we are reducing, reusing, and recovering waste in our campuses and datacenters.",
+            "Page": 41,
+            "Source From": "text",
+            "Answer": "[YES]. Microsoft has a strategy on waste management that involves reduction, recycling, and recovering waste.",
+            "Source Relevance Score": 3.0,
+            "Unsure Flag": null,
+            "Addressed Directly": "directly",
+            "Core 16 Question": 1
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "path": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Expert-Annotated Relevant Sources Dataset/Core_Questions_with_Explanations.xlsx",
+    "exists": true,
+    "bytes": 72010,
+    "tables": [
+      {
+        "table": "Sheet1",
+        "n_rows": 16,
+        "n_cols": 7,
+        "columns": [
+          "Index",
+          "question",
+          "Definition",
+          "Refined Definition",
+          "Raw Information Retrieval Background",
+          "Information Retrieval Background",
+          "Answer Definition Help"
+        ],
+        "dtypes": {
+          "Index": "int64",
+          "question": "object",
+          "Definition": "object",
+          "Refined Definition": "object",
+          "Raw Information Retrieval Background": "object",
+          "Information Retrieval Background": "object",
+          "Answer Definition Help": "object"
+        },
+        "null_counts": {
+          "Index": 0,
+          "question": 0,
+          "Definition": 0,
+          "Refined Definition": 0,
+          "Raw Information Retrieval Background": 0,
+          "Information Retrieval Background": 0,
+          "Answer Definition Help": 0
+        },
+        "sample_rows": [
+          {
+            "Index": 1,
+            "question": "Does the company provide definitions for climate change adaptation?",
+            "Definition": "Answer \"Yes\" only if there is evidence of an explicit definition of climate change adaptation. The definition should be general and not necessarily tied to a company's sector or industry. Third-party definitions are valid. ",
+            "Refined Definition": "Answer \"Yes\" only if there is evidence of an explicit definition of climate change adaptation. The definition should be general and not necessarily tied to a company's sector or industry. Third-party definitions are valid. ",
+            "Raw Information Retrieval Background": "1. **Definitions**: Explicit statements of the exact meaning of a given word in the report.\n2. **Climate Change**: Long-term shifts in temperatures and weather patterns. These shifts may or may not be the result of human activities, particularly the burning of fossil fuels, and are associated with the increasing intensity and frequency of extreme weather events.\n3. **Climate Change Adaptation**: The process of building resilience to the effects of climate change. It refers to changes in processes, practices, and structures to moderate potential damages or to benefit from opportunities associated with climate change.",
+            "Information Retrieval Background": "[[C1]] ||Co|| 1. **Definitions**: Explicit statements of the exact meaning of a given word in the report.\n[[C1]] ||La|| 2. **Climate Change**: Long-term shifts in temperatures and weather patterns. These shifts may or may not be the result of human activities, particularly the burning of fossil fuels, and are associated with the increasing intensity and frequency of extreme weather events.\n[[C2]] ||Co|| 3. **Climate Change Adaptation**: The process of building resilience to the effects of climate change. It refers to changes in processes, practices, and structures to moderate potential damages or to benefit from opportunities associated with climate change.",
+            "Answer Definition Help": "Answer \"Yes\" only if there is evidence of an explicit definition of climate change adaptation. The definition should be general and not necessarily tied to a company's sector or industry. Third-party definitions are valid. "
+          },
+          {
+            "Index": 2,
+            "question": "Has the company identified any synergies between its climate change adaptation goals and other business goals?",
+            "Definition": "Climate change adaptation goals includes efforts to mitigate the impact of climate change or efforts to secure opportunities presented by climate change. For example, this could include goals to reduce water consumption or goals to reduce exposure to climate change impacts. Other business goals include conventional business goals to maximise profits. This could include ambitions to expand the product offering or increase efficiency in production processes. Information is relevant/valid when an explicit link is made between a conventional business goal and goal related to climate change adaptation. ",
+            "Refined Definition": "Climate change adaptation goals includes efforts to mitigate the impacts of climate change or efforts to secure the opportunities presented by climate change. For example, this could include goals to reduce water consumption or goals to reduce exposure to climate change impacts. Other business goals pertain to the more conventional business objective to maximise profits. This includes ambitions to expand a product offering or increase efficiency in production processes, and do not include other explicitly social or environmental goals. Synergies are mutually advantageous conjunctions of business elements; in this case, how a conventional business goal and a goal related to climate change adaptation are explicitly linked in a company report.",
+            "Raw Information Retrieval Background": "1. **Identification**: Process of clearly stating an explicit link between climate adaptation goals and business goals. \n2. **Climate Change Adaptation**: The process of building resilience to the effects of climate change. It refers to changes in processes, practices, and structures to moderate potential damages or to benefit from opportunities associated with climate change.\n3. **Climate Change Adaptation Goals**: Clearly stated targets or objectives identified by a company with the aim of building resilience to the effects of climate change. These goals may be related to fostering the resilience of the company to the effects of climate change or resilience for society.\n4. **Business Strategy Alignment**: The extent to which climate change adaptation aligns with the overall business strategy of the company.\n5. **Synergies**: Describes a relationship wherein the sum is greater than its parts. In this case, when business goals and climate change adaptation goals are well-aligned and are seen to accomplish more together than they can separately. In other words, climate change adaptation might be framed as enhancing profit motives and/or profit motives may be framed as supporting climate change adaptation objectives. \n6. **Market Opportunities**: Exploration of potential market opportunities and competitive advantages resulting from the alignment of climate change adaptation goals with other business objectives.\n7. **Profit**: Financial gain due to business strategy.\n8. **Competitive advantage**:  A competitive advantage is an attribute that allows an organization to outperform its competitors, especially in the longer-term.\n10. **Long-Term Value Creation**: Evaluation of how the synergy between climate change adaptation goals and other business goals contributes to long-term value creation for the company and its stakeholders.\n11. **Regulatory Compliance and Reputation**: Consideration of how aligning climate change adaptation goals with other business goals helps the company meet regulatory requirements and enhance its reputation.\n12. **Supply Chain Integration**: The extent to which climate change adaptation efforts are integrated into the company's supply chain management and relationships.\n13. **Innovation and Efficiency**: Identification of how climate change adaptation goals may drive innovation and improve operational efficiency within the company.\n13. **Triple Bottom Line**: The triple bottom line is an accounting framework with three parts: social, environmental and economic. Some organizations have adopted the TBL framework to evaluate their performance in a broader perspective to create greater business value.",
+            "Information Retrieval Background": "[[C1]] ||Co|| 1. **Identification**: Process of clearly stating an explicit link between climate adaptation goals and business goals. \n[[C2]] ||Co|| 2. **Climate Change Adaptation**: The process of building resilience to the effects of climate change. It refers to changes in processes, practices, and structures to moderate potential damages or to benefit from opportunities associated with climate change.\n[[C2]] ||Co|| 3. **Climate Change Adaptation Goals**: Clearly stated targets or objectives identified by a company with the aim of building resilience to the effects of climate change. These goals may be related to fostering the resilience of the company to the effects of climate change or resilience for society.\n[[C2]] ||La|| 4. **Business Strategy Alignment**: The extent to which climate change adaptation aligns with the overall business strategy of the company.\n[[C1]] ||Co|| 5. **Synergies**: Describes a relationship wherein the sum is greater than its parts. In this case, when business goals and climate change adaptation goals are well-aligned and are seen to accomplish more together than they can separately. In other words, climate change adaptation might be framed as enhancing profit motives and/or profit motives may be framed as supporting climate change adaptation objectives. \n[[C2]] ||La|| 6. **Market Opportunities**: Exploration of potential market opportunities and competitive advantages resulting from the alignment of climate change adaptation goals with other business objectives.\n[[C1]] ||La|| 7. **Profit**: Financial gain due to business strategy.\n[[C2]] ||La|| 8. **Competitive advantage**:  A competitive advantage is an attribute that allows an organization to outperform its competitors, especially in the longer-term.\n[[C2]] ||La|| 10. **Long-Term Value Creation**: Evaluation of how the synergy between climate change adaptation goals and other business goals contributes to long-term value creation for the company and its stakeholders.\n[[C2]] ||La|| 11. **Regulatory Compliance and Reputation**: Consideration of how aligning climate change adaptation goals with other business goals helps the company meet regulatory requirements and enhance its reputation.\n[[C2]] ||La|| 12. **Supply Chain Integration**: The extent to which climate change adaptation efforts are integrated into the company's supply chain management and relationships.\n[[C2]] ||La|| 10. **Innovation and Efficiency**: Identification of how climate change adaptation goals may drive innovation and improve operational efficiency within the company.\n[[C3]] ||La|| 12. **Triple Bottom Line**: The triple bottom line is an accounting framework with three parts: social, environmental and economic. Some organizations have adopted the TBL framework to evaluate their performance in a broader perspective to create greater business value.",
+            "Answer Definition Help": "Climate change adaptation goals includes efforts to mitigate the impact of climate change or efforts to secure opportunities presented by climate change. \u201cOther business goals\u201d includes conventional business goals to maximize profits and fulfill the purpose/mission of a company. Answer \u201cYES\u201d when a company makes an explicit link between its climate adaptation initiatives, often framed as sustainability goals, and its business aims. Key search words may include \u201copportunity\u201d and \u201cESG.\u201d Answer \u201cNO\u201d if the company only identifies the downsides of climate change, rather than the opportunities for its business. "
+          },
+          {
+            "Index": 3,
+            "question": "Does the company report the climate change scenarios used to test the resilience of its business strategy?",
+            "Definition": "Climate change scenarios are articulations of plausible future socio-economic states as a result of climate change. Resilience is defined as the ability to withstand shocks and capacity to adapt to alternative circumstances without going bankrupt. Answer \"Yes\" only if the source of the scenarios is provided or if a description is provided of how the scenario was designed. ",
+            "Refined Definition": "Climate change scenarios are articulations of plausible future socio-economic or environmental states because of climate change, which have implications for business operations and objectives. Climate change scenarios provide information to plan for multiple global emissions pathways and associated climate impacts. The resilience of a business strategy refers to a company\u2019s ability to withstand shocks and capacity to adapt to alternative circumstances without going bankrupt and while maintaining or growing a competitive advantage. Answer \"Yes\" only if the source of there is more than one scenario provided. Include a description of how multiple scenarios were designed (i.e. methods undergirding scenarios).",
+            "Raw Information Retrieval Background": "1. **Report**: Explicitly state or describe scenarios it is already operationalizing\u2014or plans to operationalize\u2014in its business strategy.\n2. **Climate Change Scenarios**: Not predictions of the future, but several plausible, internally consistent projections of what can happen under possible climate change futures. Climate change scenarios are developed according to various projections of the possible rise in global surface temperature above pre-industrial levels. In other words, climate change scenarios result from complex calculations that depend on how quickly or not humans curb greenhouse gas emissions. Specific plans of action and objectives are developed in preparation for each scenario.\n3. **Scenario Analysis**: The methodology and rigor behind the climate change scenario analysis conducted by the company to assess the resilience of its business strategy. A common tool in climate change research, which allows policymakers and companies to contrast different futures and different sets of choices associated with these futures.\n4. **Adaptation Strategies**: Information on the specific adaptation strategies the company has developed in response to the identified climate change scenarios.\n5. **Business Strategy**: The organizational goals of a company, which give it a strategic edge. It encompasses the range of strategic initiatives a company pursues to create value for the organization and its stakeholders, enabling a competitive advantage in the market.\n6. **Resilience**: The ability of a company or society to withstand shocks and capacity to adapt to circumstances.\n7. **Resilience of Business Strategy**: The ability to withstand shocks and capacity to adapt to alternative circumstances without going bankrupt and while maintaining or growing a competitive advantage.\n8. **Resilience Test**: Methods for identifying vulnerabilities, opportunities, and options under various stresses, shocks, or transitions.\n9. **Mitigation Scenarios**: Scenarios that limit human-made climate change by decreasing greenhouse gas emissions.\n10. **Vision and Objectives**:  A business strategy is intended to help a company reach its business objectives. The vision element of this provides a clear direction for the business.\n11. **Business Operations**: The tactical element of a business strategy will set out the operational details that define how the work should be delivered. Company operations are critical for the success of any business strategy, and managers who have responsibility for tactics understand what needs to be done.\n12. **Resources**: The resource element of a business plan covers the allocation of existing resources, as well as where additional resources will be found. Most businesses rely on many different resources, people, technology, financial, and physical resources.\n13. **Measurement and Analysis**: The evaluation phase of a business strategy places emphasis on how a business is performing in relation to the business strategy. Measurement, helps the business stay closely aligned to the strategy, define deadlines and goals and address things such as budget concerns.\n14. Continuous Monitoring: The frequency and process of continuous monitoring and reassessment of climate change scenarios to adapt the business strategy accordingly.",
+            "Information Retrieval Background": "[[C1]] ||Co|| 1. **Report**: Explicitly state or describe scenarios it is already operationalizing\u2014or plans to operationalize\u2014in its business strategy.\n[[C3]] ||Co|| 2. **Climate Change Scenarios**: Not predictions of the future, but several plausible, internally consistent projections of what can happen under possible climate change futures. Climate change scenarios are developed according to various projections of the possible rise in global surface temperature above pre-industrial levels. In other words, climate change scenarios result from complex calculations that depend on how quickly or not humans curb greenhouse gas emissions. Specific plans of action and objectives are developed in preparation for each scenario.\n[[C2]] ||Co|| 3. **Scenario Analysis**: The methodology and rigor behind the climate change scenario analysis conducted by the company to assess the resilience of its business strategy. A common tool in climate change research, which allows policymakers and companies to contrast different futures and different sets of choices associated with these futures.\n[[C2]] ||La|| 4. **Adaptation Strategies**: Information on the specific adaptation strategies the company has developed in response to the identified climate change scenarios.\n[[C2]] ||Co|| 5. **Business Strategy**: The organizational goals of a company, which give it a strategic edge. It encompasses the range of strategic initiatives a company pursues to create value for the organization and its stakeholders, enabling a competitive advantage in the market.\n[[C1]] ||Co|| 6. **Resilience**: The ability of a company or society to withstand shocks and capacity to adapt to circumstances.\n[[C3]] ||Co|| 7. **Resilience of Business Strategy**: The ability to withstand shocks and capacity to adapt to alternative circumstances without going bankrupt and while maintaining or growing a competitive advantage.\n[[C3]] ||Co|| 8. **Resilience Test**: Methods for identifying vulnerabilities, opportunities, and options under various stresses, shocks, or transitions.\n[[C3]] ||La|| 9. **Mitigation Scenarios**: Scenarios that limit human-made climate change by decreasing greenhouse gas emissions.\n[[C2]] ||La|| 10. **Vision and Objectives**:  A business strategy is intended to help a company reach its business objectives. The vision element of this provides a clear direction for the business.\n[[C2]] ||La|| 11. **Business Operations**: The tactical element of a business strategy will set out the operational details that define how the work should be delivered. Company operations are critical for the success of any business strategy, and managers who have responsibility for tactics understand what needs to be done.\n[[C1]] ||La|| 12. **Resources**: The resource element of a business plan covers the allocation of existing resources, as well as where additional resources will be found. Most businesses rely on many different resources, people, technology, financial, and physical resources.\n[[C2]] ||La|| 13. **Measurement and Analysis**: The evaluation phase of a business strategy places emphasis on how a business is performing in relation to the business strategy. Measurement, helps the business stay closely aligned to the strategy, define deadlines and goals and address things such as budget concerns.\n[[C2]] ||La|| 14. Continuous Monitoring: The frequency and process of continuous monitoring and reassessment of climate change scenarios to adapt the business strategy accordingly.",
+            "Answer Definition Help": "Climate change scenarios are articulations of plausible future socio-economic states as a result of climate change. Resilience is defined as the ability to withstand shocks and capacity to adapt to alternative circumstances without going bankrupt. Answer \"Yes\" only if the source of the scenarios is provided or if a description is provided of how the scenario was designed. Answer \u201cNo\u201d if the company does not conduct a scenario analysis or provide an explanation of its methodology (explanations can even be brief). If the company mentions long, medium, and short term emissions targets, this does not count as a climate change scenario, which should be focused on responses to perceived risk. "
+          }
+        ]
+      }
+    ]
+  }
+]

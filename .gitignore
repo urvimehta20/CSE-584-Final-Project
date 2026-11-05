@@ -1,0 +1,7 @@
+.venv/
+pilot/.venv/
+pilot/data/raw/
+**/__pycache__/
+*.pyc
+.DS_Store
+.python-version

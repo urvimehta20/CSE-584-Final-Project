@@ -1,0 +1,719 @@
+{
+  "gold_threshold": 2.0,
+  "n_chunks_in_corpus": 8464,
+  "definition": "Setting G evaluates a QUESTION, not a (question, report) pair. Annotated reports = reports where that question appears in the report-level file. Gold = unique chunk_ids with relevance >= 2 across those reports. Chunks in reports not annotated for the question are UNJUDGED.",
+  "questions": [
+    {
+      "question": "Do the environmental/sustainability targets set by the company align with external climate change adaptation goals/targets?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 42,
+      "gold_chunks_per_report_min": 1,
+      "gold_chunks_per_report_median": 4.0,
+      "gold_chunks_per_report_max": 11,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        4,
+        4,
+        5,
+        11,
+        3,
+        5,
+        1,
+        7,
+        2
+      ],
+      "annotated_reports": [
+        "2022 Microsoft Environmental Sustainability Report.pdf",
+        "2023 Lloyds sustainability report.pdf",
+        "Deloitte 2023 Global Impact Report.pdf",
+        "HSBC Annual Holdings and Accounts Report 2023.pdf",
+        "Netflix ESG Report 2022.pdf",
+        "New Look sustainability report .pdf",
+        "Qantas 2023 Sustainability Report .pdf",
+        "Westpac 2023 climate report.pdf",
+        "Woolworths Group 2023 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+      "set": "core",
+      "n_annotated_reports": 8,
+      "n_gold_chunks": 44,
+      "gold_chunks_per_report_min": 1,
+      "gold_chunks_per_report_median": 5.0,
+      "gold_chunks_per_report_max": 11,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        4,
+        7,
+        5,
+        11,
+        3,
+        5,
+        1,
+        8
+      ],
+      "annotated_reports": [
+        "2022 Microsoft Environmental Sustainability Report.pdf",
+        "2023 Lloyds sustainability report.pdf",
+        "Deloitte 2023 Global Impact Report.pdf",
+        "HSBC Annual Holdings and Accounts Report 2023.pdf",
+        "Netflix ESG Report 2022.pdf",
+        "New Look sustainability report .pdf",
+        "Qantas 2023 Sustainability Report .pdf",
+        "Westpac 2023 climate report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company encourage downstream partners to carry out climate-related risk assessments?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 23,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 1.0,
+      "gold_chunks_per_report_max": 14,
+      "n_annotated_reports_with_zero_gold": 4,
+      "gold_chunks_per_report": [
+        3,
+        0,
+        3,
+        1,
+        14,
+        0,
+        0,
+        0,
+        2
+      ],
+      "annotated_reports": [
+        "AT&T 2022 Sustainability Summary.pdf",
+        "AstraZeneca Sustainability Report 2023.pdf",
+        "Boeing 2023 Sustainability Report.pdf",
+        "CostCo Climate Action Plan.pdf",
+        "JP Morgan Climate Report 2022.pdf",
+        "Meta 2023 Sustainability Report.pdf",
+        "Microsoft 2022 Environmental Sustainability Report.pdf",
+        "Veolia ESG Report 2023.pdf",
+        "Walmart ESG Highlights 2023.pdf"
+      ]
+    },
+    {
+      "question": "Does the company have a specific process in place to identify risks arising from climate change?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 38,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 2.0,
+      "gold_chunks_per_report_max": 16,
+      "n_annotated_reports_with_zero_gold": 3,
+      "gold_chunks_per_report": [
+        4,
+        0,
+        8,
+        2,
+        16,
+        0,
+        0,
+        6,
+        2
+      ],
+      "annotated_reports": [
+        "AT&T 2022 Sustainability Summary.pdf",
+        "AstraZeneca Sustainability Report 2023.pdf",
+        "Boeing 2023 Sustainability Report.pdf",
+        "CostCo Climate Action Plan.pdf",
+        "JP Morgan Climate Report 2022.pdf",
+        "Meta 2023 Sustainability Report.pdf",
+        "Microsoft 2022 Environmental Sustainability Report.pdf",
+        "Veolia ESG Report 2023.pdf",
+        "Walmart ESG Highlights 2023.pdf"
+      ]
+    },
+    {
+      "question": "Does the company have a strategy on waste management?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 26,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 3.0,
+      "gold_chunks_per_report_max": 8,
+      "n_annotated_reports_with_zero_gold": 2,
+      "gold_chunks_per_report": [
+        4,
+        4,
+        1,
+        3,
+        0,
+        5,
+        1,
+        0,
+        8
+      ],
+      "annotated_reports": [
+        "2022 Microsoft Environmental Sustainability Report.pdf",
+        "2023 Lloyds sustainability report.pdf",
+        "Deloitte 2023 Global Impact Report.pdf",
+        "HSBC Annual Holdings and Accounts Report 2023.pdf",
+        "Netflix ESG Report 2022.pdf",
+        "New Look sustainability report .pdf",
+        "Qantas 2023 Sustainability Report .pdf",
+        "Westpac 2023 climate report.pdf",
+        "Woolworths Group 2023 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company have any engagements with industry peers in relation to climate change?",
+      "set": "core",
+      "n_annotated_reports": 13,
+      "n_gold_chunks": 28,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 1.0,
+      "gold_chunks_per_report_max": 7,
+      "n_annotated_reports_with_zero_gold": 3,
+      "gold_chunks_per_report": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        0,
+        4,
+        7,
+        0,
+        0,
+        6,
+        4,
+        2
+      ],
+      "annotated_reports": [
+        "2022_BXP_ESG_Report.pdf",
+        "AEO 2022 ESG Report.pdf",
+        "CT REIT 2022 ESG Report.pdf",
+        "HM Group Sustainability Disclosure 2022.pdf",
+        "Mastercard 2022 ESG Report.pdf",
+        "McKinsey 2022 ESG Full Report.pdf",
+        "PayPal Global Impact Report 2023.pdf",
+        "Rio Tinto Climate Change Report 2023.pdf",
+        "Ryanair 2022 Sustainability Report.pdf",
+        "Sony Sustainability Report 2023.pdf",
+        "Starbucks Environmental & Social Impact Report 2022.pdf",
+        "Suncor Sustainability Report 2023.pdf",
+        "University of Oxford 2022 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company identify any impacts of its business activities on the environment?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 16,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 1.0,
+      "gold_chunks_per_report_max": 4,
+      "n_annotated_reports_with_zero_gold": 2,
+      "gold_chunks_per_report": [
+        4,
+        3,
+        3,
+        1,
+        0,
+        1,
+        0,
+        1,
+        3
+      ],
+      "annotated_reports": [
+        "2022 Microsoft Environmental Sustainability Report.pdf",
+        "2023 Lloyds sustainability report.pdf",
+        "Deloitte 2023 Global Impact Report.pdf",
+        "HSBC Annual Holdings and Accounts Report 2023.pdf",
+        "Netflix ESG Report 2022.pdf",
+        "New Look sustainability report .pdf",
+        "Qantas 2023 Sustainability Report .pdf",
+        "Westpac 2023 climate report.pdf",
+        "Woolworths Group 2023 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company provide definitions for climate change adaptation?",
+      "set": "core",
+      "n_annotated_reports": 12,
+      "n_gold_chunks": 4,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 0.0,
+      "gold_chunks_per_report_max": 3,
+      "n_annotated_reports_with_zero_gold": 10,
+      "gold_chunks_per_report": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        3,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "annotated_reports": [
+        "AEO 2022 ESG Report.pdf",
+        "CT REIT 2022 ESG Report.pdf",
+        "HM Group Sustainability Disclosure 2022.pdf",
+        "Mastercard 2022 ESG Report.pdf",
+        "McKinsey 2022 ESG Full Report.pdf",
+        "PayPal Global Impact Report 2023.pdf",
+        "Rio Tinto Climate Change Report 2023.pdf",
+        "Ryanair 2022 Sustainability Report.pdf",
+        "Sony Sustainability Report 2023.pdf",
+        "Starbucks Environmental & Social Impact Report 2022.pdf",
+        "Suncor Sustainability Report 2023.pdf",
+        "University of Oxford 2022 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company refer to any third party scenarios when identifying climate-related risks or opportunities (e.g. IPCC trajectories, NGFS scenarios, etc.)?",
+      "set": "core",
+      "n_annotated_reports": 8,
+      "n_gold_chunks": 8,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 1.0,
+      "gold_chunks_per_report_max": 2,
+      "n_annotated_reports_with_zero_gold": 2,
+      "gold_chunks_per_report": [
+        0,
+        2,
+        1,
+        2,
+        1,
+        1,
+        1,
+        0
+      ],
+      "annotated_reports": [
+        "AT&T 2022 Sustainability Summary.pdf",
+        "AstraZeneca Sustainability Report 2023.pdf",
+        "Boeing 2023 Sustainability Report.pdf",
+        "JP Morgan Climate Report 2022.pdf",
+        "Meta 2023 Sustainability Report.pdf",
+        "Microsoft 2022 Environmental Sustainability Report.pdf",
+        "Veolia ESG Report 2023.pdf",
+        "Walmart ESG Highlights 2023.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report a plan to engage with downstream partners on water consumption or water pollution?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 3,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 0.0,
+      "gold_chunks_per_report_max": 2,
+      "n_annotated_reports_with_zero_gold": 7,
+      "gold_chunks_per_report": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "annotated_reports": [
+        "2022 Microsoft Environmental Sustainability Report.pdf",
+        "2023 Lloyds sustainability report.pdf",
+        "Deloitte 2023 Global Impact Report.pdf",
+        "HSBC Annual Holdings and Accounts Report 2023.pdf",
+        "Netflix ESG Report 2022.pdf",
+        "New Look sustainability report .pdf",
+        "Qantas 2023 Sustainability Report .pdf",
+        "Westpac 2023 climate report.pdf",
+        "Woolworths Group 2023 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report how adjustments to its business operations will allow it to adapt to climate change?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 30,
+      "gold_chunks_per_report_min": 1,
+      "gold_chunks_per_report_median": 3.0,
+      "gold_chunks_per_report_max": 12,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        1,
+        1,
+        12,
+        1,
+        3,
+        3,
+        3,
+        3,
+        3
+      ],
+      "annotated_reports": [
+        "AT&T 2022 Sustainability Summary.pdf",
+        "AstraZeneca Sustainability Report 2023.pdf",
+        "Boeing 2023 Sustainability Report.pdf",
+        "CostCo Climate Action Plan.pdf",
+        "JP Morgan Climate Report 2022.pdf",
+        "Meta 2023 Sustainability Report.pdf",
+        "Microsoft 2022 Environmental Sustainability Report.pdf",
+        "Veolia ESG Report 2023.pdf",
+        "Walmart ESG Highlights 2023.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report short-term actions taken or planned to reduce its waste generation?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 28,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 3.0,
+      "gold_chunks_per_report_max": 8,
+      "n_annotated_reports_with_zero_gold": 2,
+      "gold_chunks_per_report": [
+        2,
+        4,
+        1,
+        3,
+        0,
+        7,
+        3,
+        0,
+        8
+      ],
+      "annotated_reports": [
+        "2022 Microsoft Environmental Sustainability Report.pdf",
+        "2023 Lloyds sustainability report.pdf",
+        "Deloitte 2023 Global Impact Report.pdf",
+        "HSBC Annual Holdings and Accounts Report 2023.pdf",
+        "Netflix ESG Report 2022.pdf",
+        "New Look sustainability report .pdf",
+        "Qantas 2023 Sustainability Report .pdf",
+        "Westpac 2023 climate report.pdf",
+        "Woolworths Group 2023 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report the climate change scenarios used to test the resilience of its business strategy?",
+      "set": "core",
+      "n_annotated_reports": 14,
+      "n_gold_chunks": 53,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 2.0,
+      "gold_chunks_per_report_max": 21,
+      "n_annotated_reports_with_zero_gold": 3,
+      "gold_chunks_per_report": [
+        5,
+        1,
+        2,
+        0,
+        0,
+        1,
+        4,
+        4,
+        0,
+        9,
+        21,
+        2,
+        3,
+        1
+      ],
+      "annotated_reports": [
+        "2022_BXP_ESG_Report.pdf",
+        "AEO 2022 ESG Report.pdf",
+        "CT REIT 2022 ESG Report.pdf",
+        "Coca-Cola Business Sustainability Report 2022.pdf",
+        "HM Group Sustainability Disclosure 2022.pdf",
+        "Mastercard 2022 ESG Report.pdf",
+        "McKinsey 2022 ESG Full Report.pdf",
+        "PayPal Global Impact Report 2023.pdf",
+        "Rio Tinto Climate Change Report 2023.pdf",
+        "Ryanair 2022 Sustainability Report.pdf",
+        "Sony Sustainability Report 2023.pdf",
+        "Starbucks Environmental & Social Impact Report 2022.pdf",
+        "Suncor Sustainability Report 2023.pdf",
+        "University of Oxford 2022 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report the methodology used to identify the dependencies and impact of its business activities on the environment?",
+      "set": "core",
+      "n_annotated_reports": 9,
+      "n_gold_chunks": 27,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 1.0,
+      "gold_chunks_per_report_max": 10,
+      "n_annotated_reports_with_zero_gold": 1,
+      "gold_chunks_per_report": [
+        0,
+        6,
+        10,
+        1,
+        2,
+        5,
+        1,
+        1,
+        1
+      ],
+      "annotated_reports": [
+        "AT&T 2022 Sustainability Summary.pdf",
+        "AstraZeneca Sustainability Report 2023.pdf",
+        "Boeing 2023 Sustainability Report.pdf",
+        "CostCo Climate Action Plan.pdf",
+        "JP Morgan Climate Report 2022.pdf",
+        "Meta 2023 Sustainability Report.pdf",
+        "Microsoft 2022 Environmental Sustainability Report.pdf",
+        "Veolia ESG Report 2023.pdf",
+        "Walmart ESG Highlights 2023.pdf"
+      ]
+    },
+    {
+      "question": "Does the company seek to adjust its business model to better provide climate change adaptation products and services?",
+      "set": "core",
+      "n_annotated_reports": 13,
+      "n_gold_chunks": 89,
+      "gold_chunks_per_report_min": 4,
+      "gold_chunks_per_report_median": 6.0,
+      "gold_chunks_per_report_max": 10,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        9,
+        7,
+        4,
+        4,
+        6,
+        9,
+        6,
+        8,
+        6,
+        6,
+        10,
+        8,
+        6
+      ],
+      "annotated_reports": [
+        "2022_BXP_ESG_Report.pdf",
+        "AEO 2022 ESG Report.pdf",
+        "CT REIT 2022 ESG Report.pdf",
+        "HM Group Sustainability Disclosure 2022.pdf",
+        "Mastercard 2022 ESG Report.pdf",
+        "McKinsey 2022 ESG Full Report.pdf",
+        "PayPal Global Impact Report 2023.pdf",
+        "Rio Tinto Climate Change Report 2023.pdf",
+        "Ryanair 2022 Sustainability Report.pdf",
+        "Sony Sustainability Report 2023.pdf",
+        "Starbucks Environmental & Social Impact Report 2022.pdf",
+        "Suncor Sustainability Report 2023.pdf",
+        "University of Oxford 2022 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Has the company identified any synergies between its climate change adaptation goals and other business goals?",
+      "set": "core",
+      "n_annotated_reports": 13,
+      "n_gold_chunks": 58,
+      "gold_chunks_per_report_min": 1,
+      "gold_chunks_per_report_median": 5.0,
+      "gold_chunks_per_report_max": 8,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        5,
+        5,
+        6,
+        8,
+        2,
+        5,
+        4,
+        1,
+        3,
+        2,
+        8,
+        8,
+        1
+      ],
+      "annotated_reports": [
+        "2022_BXP_ESG_Report.pdf",
+        "AEO 2022 ESG Report.pdf",
+        "CT REIT 2022 ESG Report.pdf",
+        "HM Group Sustainability Disclosure 2022.pdf",
+        "Mastercard 2022 ESG Report.pdf",
+        "McKinsey 2022 ESG Full Report.pdf",
+        "PayPal Global Impact Report 2023.pdf",
+        "Rio Tinto Climate Change Report 2023.pdf",
+        "Ryanair 2022 Sustainability Report.pdf",
+        "Sony Sustainability Report 2023.pdf",
+        "Starbucks Environmental & Social Impact Report 2022.pdf",
+        "Suncor Sustainability Report 2023.pdf",
+        "University of Oxford 2022 Sustainability Report.pdf"
+      ]
+    },
+    {
+      "question": "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 0,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 0.0,
+      "gold_chunks_per_report_max": 0,
+      "n_annotated_reports_with_zero_gold": 1,
+      "gold_chunks_per_report": [
+        0
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 1,
+      "gold_chunks_per_report_min": 1,
+      "gold_chunks_per_report_median": 1.0,
+      "gold_chunks_per_report_max": 1,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        1
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 3,
+      "gold_chunks_per_report_min": 3,
+      "gold_chunks_per_report_median": 3.0,
+      "gold_chunks_per_report_max": 3,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        3
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 11,
+      "gold_chunks_per_report_min": 11,
+      "gold_chunks_per_report_median": 11.0,
+      "gold_chunks_per_report_max": 11,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        11
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 27,
+      "gold_chunks_per_report_min": 27,
+      "gold_chunks_per_report_median": 27.0,
+      "gold_chunks_per_report_max": 27,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        27
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 0,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 0.0,
+      "gold_chunks_per_report_max": 0,
+      "n_annotated_reports_with_zero_gold": 1,
+      "gold_chunks_per_report": [
+        0
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 0,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 0.0,
+      "gold_chunks_per_report_max": 0,
+      "n_annotated_reports_with_zero_gold": 1,
+      "gold_chunks_per_report": [
+        0
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 4,
+      "gold_chunks_per_report_min": 4,
+      "gold_chunks_per_report_median": 4.0,
+      "gold_chunks_per_report_max": 4,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        4
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 16,
+      "gold_chunks_per_report_min": 16,
+      "gold_chunks_per_report_median": 16.0,
+      "gold_chunks_per_report_max": 16,
+      "n_annotated_reports_with_zero_gold": 0,
+      "gold_chunks_per_report": [
+        16
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    },
+    {
+      "question": "What are Scope 1 emissions?",
+      "set": "extra",
+      "n_annotated_reports": 1,
+      "n_gold_chunks": 0,
+      "gold_chunks_per_report_min": 0,
+      "gold_chunks_per_report_median": 0.0,
+      "gold_chunks_per_report_max": 0,
+      "n_annotated_reports_with_zero_gold": 1,
+      "gold_chunks_per_report": [
+        0
+      ],
+      "annotated_reports": [
+        "Coca-Cola Business Sustainability Report 2022.pdf"
+      ]
+    }
+  ],
+  "n_core_questions": 16,
+  "n_extra_questions": 10,
+  "n_core_questions_with_zero_gold": 0,
+  "n_extra_questions_with_zero_gold": 4
+}

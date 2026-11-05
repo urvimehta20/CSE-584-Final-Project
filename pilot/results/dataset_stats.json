@@ -1,0 +1,275 @@
+{
+  "source_files": {
+    "report_level": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Report-Level Dataset/ClimRetrieve_ReportLevel_V1.csv",
+    "expert_base": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Expert-Annotated Relevant Sources Dataset/ClimRetrieve_base.xlsx",
+    "core_questions": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Expert-Annotated Relevant Sources Dataset/Core_Questions_with_Explanations.xlsx"
+  },
+  "n_report_level_rows_raw": 47941,
+  "n_empty_paragraph_rows_dropped": 15,
+  "n_relevance_nan_rows_in_report_level": 9,
+  "n_reports": 32,
+  "n_chunks": 8464,
+  "chunks_per_report": {
+    "min": 23,
+    "median": 184.5,
+    "max": 2243,
+    "mean": 264.5
+  },
+  "n_unique_questions_all": 26,
+  "n_unique_core_questions": 16,
+  "n_unique_extra_questions": 10,
+  "n_queries_all": 172,
+  "n_queries_core": 162,
+  "n_queries_extra": 10,
+  "n_qrels_rows": 47911,
+  "n_qrels_positive_relevance": 685,
+  "relevance_value_counts": {
+    "0.0": 47226,
+    "1.0": 106,
+    "2.0": 190,
+    "3.0": 389
+  },
+  "all_questions": {
+    "label": "all_report_level_questions",
+    "n_unique_questions": 26,
+    "n_queries": 172,
+    "n_queries_zero_gold_ge2": 43,
+    "n_queries_excluded_from_eval": 43,
+    "n_eval_queries_after_exclusion": 129,
+    "gold_chunks_per_query_ge2_all_queries": {
+      "min": 0,
+      "median": 2.0,
+      "max": 27,
+      "mean": 3.366279069767442
+    },
+    "gold_chunks_per_query_ge2_eval_only": {
+      "min": 1,
+      "median": 3.0,
+      "max": 27,
+      "mean": 4.488372093023256
+    },
+    "gold_chunks_per_query_ge1_all_queries": {
+      "min": 0,
+      "median": 3.0,
+      "max": 28,
+      "mean": 3.9825581395348837
+    },
+    "gold_chunks_per_query_eq3_all_queries": {
+      "min": 0,
+      "median": 1.0,
+      "max": 20,
+      "mean": 2.261627906976744
+    },
+    "n_queries_zero_gold_ge1": 25,
+    "n_queries_zero_gold_eq3": 75
+  },
+  "core_questions": {
+    "label": "core_questions",
+    "n_unique_questions": 16,
+    "n_queries": 162,
+    "n_queries_zero_gold_ge2": 39,
+    "n_queries_excluded_from_eval": 39,
+    "n_eval_queries_after_exclusion": 123,
+    "gold_chunks_per_query_ge2_all_queries": {
+      "min": 0,
+      "median": 2.0,
+      "max": 21,
+      "mean": 3.191358024691358
+    },
+    "gold_chunks_per_query_ge2_eval_only": {
+      "min": 1,
+      "median": 3.0,
+      "max": 21,
+      "mean": 4.203252032520325
+    },
+    "gold_chunks_per_query_ge1_all_queries": {
+      "min": 0,
+      "median": 3.0,
+      "max": 21,
+      "mean": 3.7962962962962963
+    },
+    "gold_chunks_per_query_eq3_all_queries": {
+      "min": 0,
+      "median": 1.0,
+      "max": 13,
+      "mean": 2.154320987654321
+    },
+    "n_queries_zero_gold_ge1": 22,
+    "n_queries_zero_gold_eq3": 70
+  },
+  "extra_questions": {
+    "label": "extra_questions",
+    "n_unique_questions": 10,
+    "n_queries": 10,
+    "n_queries_zero_gold_ge2": 4,
+    "n_queries_excluded_from_eval": 4,
+    "n_eval_queries_after_exclusion": 6,
+    "gold_chunks_per_query_ge2_all_queries": {
+      "min": 0,
+      "median": 2.0,
+      "max": 27,
+      "mean": 6.2
+    },
+    "gold_chunks_per_query_ge2_eval_only": {
+      "min": 1,
+      "median": 7.5,
+      "max": 27,
+      "mean": 10.333333333333334
+    },
+    "gold_chunks_per_query_ge1_all_queries": {
+      "min": 0,
+      "median": 3.0,
+      "max": 28,
+      "mean": 7.0
+    },
+    "gold_chunks_per_query_eq3_all_queries": {
+      "min": 0,
+      "median": 0.5,
+      "max": 20,
+      "mean": 4.0
+    },
+    "n_queries_zero_gold_ge1": 3,
+    "n_queries_zero_gold_eq3": 5
+  },
+  "extra_coverage": [
+    {
+      "question": "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 0,
+      "n_queries_zero_gold": 1,
+      "dropped": true
+    },
+    {
+      "question": "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 1,
+      "n_queries_zero_gold": 0,
+      "dropped": false
+    },
+    {
+      "question": "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 3,
+      "n_queries_zero_gold": 0,
+      "dropped": false
+    },
+    {
+      "question": "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 11,
+      "n_queries_zero_gold": 0,
+      "dropped": false
+    },
+    {
+      "question": "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 27,
+      "n_queries_zero_gold": 0,
+      "dropped": false
+    },
+    {
+      "question": "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 0,
+      "n_queries_zero_gold": 1,
+      "dropped": true
+    },
+    {
+      "question": "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 0,
+      "n_queries_zero_gold": 1,
+      "dropped": true
+    },
+    {
+      "question": "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 4,
+      "n_queries_zero_gold": 0,
+      "dropped": false
+    },
+    {
+      "question": "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 16,
+      "n_queries_zero_gold": 0,
+      "dropped": false
+    },
+    {
+      "question": "What are Scope 1 emissions?",
+      "n_reports": 1,
+      "n_queries": 1,
+      "n_gold_chunks_ge2": 0,
+      "n_queries_zero_gold": 1,
+      "dropped": true
+    }
+  ],
+  "dropped_extra_questions": [
+    "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+    "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+    "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+    "What are Scope 1 emissions?"
+  ],
+  "expert_base_pairs_missing_from_report_level": [
+    {
+      "report": "2022_BXP_ESG_Report.pdf",
+      "question": "Does the company provide definitions for climate change adaptation?"
+    }
+  ],
+  "core_question_list": [
+    "Do the environmental/sustainability targets set by the company align with external climate change adaptation goals/targets?",
+    "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+    "Does the company encourage downstream partners to carry out climate-related risk assessments?",
+    "Does the company have a specific process in place to identify risks arising from climate change?",
+    "Does the company have a strategy on waste management?",
+    "Does the company have any engagements with industry peers in relation to climate change?",
+    "Does the company identify any impacts of its business activities on the environment?",
+    "Does the company provide definitions for climate change adaptation?",
+    "Does the company refer to any third party scenarios when identifying climate-related risks or opportunities (e.g. IPCC trajectories, NGFS scenarios, etc.)?",
+    "Does the company report a plan to engage with downstream partners on water consumption or water pollution?",
+    "Does the company report how adjustments to its business operations will allow it to adapt to climate change?",
+    "Does the company report short-term actions taken or planned to reduce its waste generation?",
+    "Does the company report the climate change scenarios used to test the resilience of its business strategy?",
+    "Does the company report the methodology used to identify the dependencies and impact of its business activities on the environment?",
+    "Does the company seek to adjust its business model to better provide climate change adaptation products and services?",
+    "Has the company identified any synergies between its climate change adaptation goals and other business goals?"
+  ],
+  "extra_question_list": [
+    "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+    "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+    "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+    "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+    "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+    "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+    "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+    "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+    "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)",
+    "What are Scope 1 emissions?"
+  ],
+  "notes": [
+    "Dropped 15 report-level rows with null/empty paragraph (raw rows=47941).",
+    "Report-level relevance has 9 NaN values. After max-aggregating per (report, question, paragraph), pairs whose only values are NaN are omitted from qrels.",
+    "Query set_type is tagged from ClimRetrieve_base 'Core 16 Question' (max flag per Question text). It matches Core_Questions_with_Explanations.xlsx.",
+    "Exact-text dedup within a report collapsed 1 paragraph text(s) that had more than one original row index.",
+    "Expert-base (Document, Question) pairs absent from report-level (1): [('2022_BXP_ESG_Report.pdf', 'Does the company provide definitions for climate change adaptation?')]."
+  ],
+  "gold_threshold_main": 2.0,
+  "column_mapping": {
+    "chunks.text": "report-level.paragraph (exact-deduped within report)",
+    "chunks.report": "report-level.report",
+    "queries.question": "report-level.question",
+    "queries.report": "report-level.report",
+    "queries.set_type": "core if ClimRetrieve_base['Core 16 Question']==1 else extra",
+    "qrels.relevance": "report-level.relevance (max over duplicate rows)",
+    "qrels.set_type": "copied from queries.set_type"
+  }
+}

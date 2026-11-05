@@ -1,0 +1,5882 @@
+{
+  "generated_at_utc": "2026-11-05T03:21:25.981669+00:00",
+  "seed": 42,
+  "environment": {
+    "python": "3.12.13",
+    "platform": "macOS-15.6.1-arm64-arm-64bit",
+    "machine": "arm64",
+    "cpu_model": "Apple M4",
+    "cpu_cores": 10,
+    "ram_gb": 16.0,
+    "library_versions": {
+      "python": "3.12.13",
+      "pandas": "2.2.3",
+      "pyarrow": "18.1.0",
+      "numpy": "2.2.6",
+      "sklearn": "1.6.1",
+      "matplotlib": "3.10.1",
+      "sentence_transformers": "3.4.1",
+      "torch": "2.6.0",
+      "faiss": "1.9.0",
+      "threadpoolctl": "3.6.0"
+    },
+    "embed_model_name": "BAAI/bge-small-en-v1.5"
+  },
+  "dataset": {
+    "source_files": {
+      "report_level": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Report-Level Dataset/ClimRetrieve_ReportLevel_V1.csv",
+      "expert_base": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Expert-Annotated Relevant Sources Dataset/ClimRetrieve_base.xlsx",
+      "core_questions": "/Users/urvimehta/UMich_projects/CSE_584FInalProject/pilot/data/raw/ClimRetrieve/Expert-Annotated Relevant Sources Dataset/Core_Questions_with_Explanations.xlsx"
+    },
+    "n_report_level_rows_raw": 47941,
+    "n_empty_paragraph_rows_dropped": 15,
+    "n_relevance_nan_rows_in_report_level": 9,
+    "n_reports": 32,
+    "n_chunks": 8464,
+    "chunks_per_report": {
+      "min": 23,
+      "median": 184.5,
+      "max": 2243,
+      "mean": 264.5
+    },
+    "n_unique_questions_all": 26,
+    "n_unique_core_questions": 16,
+    "n_unique_extra_questions": 10,
+    "n_queries_all": 172,
+    "n_queries_core": 162,
+    "n_queries_extra": 10,
+    "n_qrels_rows": 47911,
+    "n_qrels_positive_relevance": 685,
+    "relevance_value_counts": {
+      "0.0": 47226,
+      "1.0": 106,
+      "2.0": 190,
+      "3.0": 389
+    },
+    "all_questions": {
+      "label": "all_report_level_questions",
+      "n_unique_questions": 26,
+      "n_queries": 172,
+      "n_queries_zero_gold_ge2": 43,
+      "n_queries_excluded_from_eval": 43,
+      "n_eval_queries_after_exclusion": 129,
+      "gold_chunks_per_query_ge2_all_queries": {
+        "min": 0,
+        "median": 2.0,
+        "max": 27,
+        "mean": 3.366279069767442
+      },
+      "gold_chunks_per_query_ge2_eval_only": {
+        "min": 1,
+        "median": 3.0,
+        "max": 27,
+        "mean": 4.488372093023256
+      },
+      "gold_chunks_per_query_ge1_all_queries": {
+        "min": 0,
+        "median": 3.0,
+        "max": 28,
+        "mean": 3.9825581395348837
+      },
+      "gold_chunks_per_query_eq3_all_queries": {
+        "min": 0,
+        "median": 1.0,
+        "max": 20,
+        "mean": 2.261627906976744
+      },
+      "n_queries_zero_gold_ge1": 25,
+      "n_queries_zero_gold_eq3": 75
+    },
+    "core_questions": {
+      "label": "core_questions",
+      "n_unique_questions": 16,
+      "n_queries": 162,
+      "n_queries_zero_gold_ge2": 39,
+      "n_queries_excluded_from_eval": 39,
+      "n_eval_queries_after_exclusion": 123,
+      "gold_chunks_per_query_ge2_all_queries": {
+        "min": 0,
+        "median": 2.0,
+        "max": 21,
+        "mean": 3.191358024691358
+      },
+      "gold_chunks_per_query_ge2_eval_only": {
+        "min": 1,
+        "median": 3.0,
+        "max": 21,
+        "mean": 4.203252032520325
+      },
+      "gold_chunks_per_query_ge1_all_queries": {
+        "min": 0,
+        "median": 3.0,
+        "max": 21,
+        "mean": 3.7962962962962963
+      },
+      "gold_chunks_per_query_eq3_all_queries": {
+        "min": 0,
+        "median": 1.0,
+        "max": 13,
+        "mean": 2.154320987654321
+      },
+      "n_queries_zero_gold_ge1": 22,
+      "n_queries_zero_gold_eq3": 70
+    },
+    "extra_questions": {
+      "label": "extra_questions",
+      "n_unique_questions": 10,
+      "n_queries": 10,
+      "n_queries_zero_gold_ge2": 4,
+      "n_queries_excluded_from_eval": 4,
+      "n_eval_queries_after_exclusion": 6,
+      "gold_chunks_per_query_ge2_all_queries": {
+        "min": 0,
+        "median": 2.0,
+        "max": 27,
+        "mean": 6.2
+      },
+      "gold_chunks_per_query_ge2_eval_only": {
+        "min": 1,
+        "median": 7.5,
+        "max": 27,
+        "mean": 10.333333333333334
+      },
+      "gold_chunks_per_query_ge1_all_queries": {
+        "min": 0,
+        "median": 3.0,
+        "max": 28,
+        "mean": 7.0
+      },
+      "gold_chunks_per_query_eq3_all_queries": {
+        "min": 0,
+        "median": 0.5,
+        "max": 20,
+        "mean": 4.0
+      },
+      "n_queries_zero_gold_ge1": 3,
+      "n_queries_zero_gold_eq3": 5
+    },
+    "extra_coverage": [
+      {
+        "question": "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 0,
+        "n_queries_zero_gold": 1,
+        "dropped": true
+      },
+      {
+        "question": "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 1,
+        "n_queries_zero_gold": 0,
+        "dropped": false
+      },
+      {
+        "question": "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 3,
+        "n_queries_zero_gold": 0,
+        "dropped": false
+      },
+      {
+        "question": "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 11,
+        "n_queries_zero_gold": 0,
+        "dropped": false
+      },
+      {
+        "question": "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 27,
+        "n_queries_zero_gold": 0,
+        "dropped": false
+      },
+      {
+        "question": "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 0,
+        "n_queries_zero_gold": 1,
+        "dropped": true
+      },
+      {
+        "question": "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 0,
+        "n_queries_zero_gold": 1,
+        "dropped": true
+      },
+      {
+        "question": "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 4,
+        "n_queries_zero_gold": 0,
+        "dropped": false
+      },
+      {
+        "question": "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 16,
+        "n_queries_zero_gold": 0,
+        "dropped": false
+      },
+      {
+        "question": "What are Scope 1 emissions?",
+        "n_reports": 1,
+        "n_queries": 1,
+        "n_gold_chunks_ge2": 0,
+        "n_queries_zero_gold": 1,
+        "dropped": true
+      }
+    ],
+    "dropped_extra_questions": [
+      "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+      "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+      "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+      "What are Scope 1 emissions?"
+    ],
+    "expert_base_pairs_missing_from_report_level": [
+      {
+        "report": "2022_BXP_ESG_Report.pdf",
+        "question": "Does the company provide definitions for climate change adaptation?"
+      }
+    ],
+    "core_question_list": [
+      "Do the environmental/sustainability targets set by the company align with external climate change adaptation goals/targets?",
+      "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+      "Does the company encourage downstream partners to carry out climate-related risk assessments?",
+      "Does the company have a specific process in place to identify risks arising from climate change?",
+      "Does the company have a strategy on waste management?",
+      "Does the company have any engagements with industry peers in relation to climate change?",
+      "Does the company identify any impacts of its business activities on the environment?",
+      "Does the company provide definitions for climate change adaptation?",
+      "Does the company refer to any third party scenarios when identifying climate-related risks or opportunities (e.g. IPCC trajectories, NGFS scenarios, etc.)?",
+      "Does the company report a plan to engage with downstream partners on water consumption or water pollution?",
+      "Does the company report how adjustments to its business operations will allow it to adapt to climate change?",
+      "Does the company report short-term actions taken or planned to reduce its waste generation?",
+      "Does the company report the climate change scenarios used to test the resilience of its business strategy?",
+      "Does the company report the methodology used to identify the dependencies and impact of its business activities on the environment?",
+      "Does the company seek to adjust its business model to better provide climate change adaptation products and services?",
+      "Has the company identified any synergies between its climate change adaptation goals and other business goals?"
+    ],
+    "extra_question_list": [
+      "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+      "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+      "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+      "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+      "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+      "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+      "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+      "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+      "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)",
+      "What are Scope 1 emissions?"
+    ],
+    "notes": [
+      "Dropped 15 report-level rows with null/empty paragraph (raw rows=47941).",
+      "Report-level relevance has 9 NaN values. After max-aggregating per (report, question, paragraph), pairs whose only values are NaN are omitted from qrels.",
+      "Query set_type is tagged from ClimRetrieve_base 'Core 16 Question' (max flag per Question text). It matches Core_Questions_with_Explanations.xlsx.",
+      "Exact-text dedup within a report collapsed 1 paragraph text(s) that had more than one original row index.",
+      "Expert-base (Document, Question) pairs absent from report-level (1): [('2022_BXP_ESG_Report.pdf', 'Does the company provide definitions for climate change adaptation?')]."
+    ],
+    "gold_threshold_main": 2.0,
+    "column_mapping": {
+      "chunks.text": "report-level.paragraph (exact-deduped within report)",
+      "chunks.report": "report-level.report",
+      "queries.question": "report-level.question",
+      "queries.report": "report-level.report",
+      "queries.set_type": "core if ClimRetrieve_base['Core 16 Question']==1 else extra",
+      "qrels.relevance": "report-level.relevance (max over duplicate rows)",
+      "qrels.set_type": "copied from queries.set_type"
+    }
+  },
+  "splits": {
+    "core_dev": [
+      "Do the environmental/sustainability targets set by the company align with external climate change adaptation goals/targets?",
+      "Does the company have a specific process in place to identify risks arising from climate change?",
+      "Does the company identify any impacts of its business activities on the environment?",
+      "Does the company provide definitions for climate change adaptation?",
+      "Does the company report a plan to engage with downstream partners on water consumption or water pollution?",
+      "Does the company report how adjustments to its business operations will allow it to adapt to climate change?",
+      "Does the company report short-term actions taken or planned to reduce its waste generation?",
+      "Has the company identified any synergies between its climate change adaptation goals and other business goals?"
+    ],
+    "core_test": [
+      "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+      "Does the company encourage downstream partners to carry out climate-related risk assessments?",
+      "Does the company have a strategy on waste management?",
+      "Does the company have any engagements with industry peers in relation to climate change?",
+      "Does the company refer to any third party scenarios when identifying climate-related risks or opportunities (e.g. IPCC trajectories, NGFS scenarios, etc.)?",
+      "Does the company report the climate change scenarios used to test the resilience of its business strategy?",
+      "Does the company report the methodology used to identify the dependencies and impact of its business activities on the environment?",
+      "Does the company seek to adjust its business model to better provide climate change adaptation products and services?"
+    ],
+    "extra_retained": [
+      "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+      "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+      "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+      "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+      "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+      "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)"
+    ],
+    "extra_dropped": [
+      "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+      "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+      "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+      "What are Scope 1 emissions?"
+    ],
+    "rule": "Split the 16 core questions 8/8 by question string, not by query. Extra questions are a secondary held-out set."
+  },
+  "embeddings": {
+    "model_name": "BAAI/bge-small-en-v1.5",
+    "query_prefix": "Represent this sentence for searching relevant passages: ",
+    "dim": 384,
+    "normalized": true,
+    "n_chunks": 8464,
+    "n_unique_questions": 26
+  },
+  "taxonomy": {
+    "n_leaves": 14,
+    "leaf_ids": [
+      "e_physical_climate_risk",
+      "e_transition_risk",
+      "e_climate_adaptation",
+      "e_ghg_emissions",
+      "e_energy",
+      "e_water",
+      "e_biodiversity",
+      "e_waste",
+      "s_workforce",
+      "s_health_safety",
+      "s_community",
+      "g_board_oversight",
+      "g_risk_management",
+      "g_ethics"
+    ],
+    "pillar_ids": [
+      "E",
+      "S",
+      "G"
+    ],
+    "node_ids": [
+      "root",
+      "E",
+      "S",
+      "G",
+      "e_physical_climate_risk",
+      "e_transition_risk",
+      "e_climate_adaptation",
+      "e_ghg_emissions",
+      "e_energy",
+      "e_water",
+      "e_biodiversity",
+      "e_waste",
+      "s_workforce",
+      "s_health_safety",
+      "s_community",
+      "g_board_oversight",
+      "g_risk_management",
+      "g_ethics"
+    ]
+  },
+  "tau_selection": {
+    "rule": "\u03c4 is taken from the per-chunk second-highest leaf cosine (p25, p50, p75), so the threshold changes multi-leaf assignment. Every chunk still receives at least its top-1 leaf.",
+    "n_chunk_leaf_scores": 118496,
+    "all_scores": {
+      "min": 0.28743818402290344,
+      "p25": 0.4812878668308258,
+      "p50": 0.5291179716587067,
+      "p75": 0.5753369331359863,
+      "max": 0.7983298301696777
+    },
+    "top1_scores": {
+      "min": 0.4292483329772949,
+      "p25": 0.5791347771883011,
+      "p50": 0.6234667599201202,
+      "p75": 0.6653759479522705,
+      "max": 0.7983298301696777
+    },
+    "second_scores": {
+      "min": 0.42386454343795776,
+      "p25": 0.5543901920318604,
+      "p50": 0.5935922265052795,
+      "p75": 0.6276344805955887,
+      "max": 0.7581455111503601
+    },
+    "tau_values": [
+      0.5543901920318604,
+      0.5935922265052795,
+      0.6276344805955887
+    ],
+    "seed": 42
+  },
+  "retrieval": {
+    "chosen_setting": {
+      "level": "leaf",
+      "lambda": 3,
+      "tau": 0.5935922265052795,
+      "selection_rule": "On core-dev only: maximize B mean Recall@10; ties broken by lower mean miss_rate, then lower mean selectivity.",
+      "core_dev_recall@10": {
+        "mean": 0.3766578118850846,
+        "ci95_low": 0.2884543732782369,
+        "ci95_high": 0.47859885379771744,
+        "n": 55
+      }
+    },
+    "sweep_points": [
+      {
+        "level": "leaf",
+        "lambda": 1,
+        "tau": 0.5543901920318604,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.019833038095384836,
+              "p95": 0.1630455954000349,
+              "mean": 0.04115530649538745,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3548396300669027,
+              "ci95_low": 0.2676734307359307,
+              "ci95_high": 0.4552495818575363,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5264246359700906,
+              "ci95_low": 0.428667994883904,
+              "ci95_high": 0.629530204643841,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.22542207792207794,
+              "ci95_low": 0.14603409090909092,
+              "ci95_high": 0.3159705086580087,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.44064855448711976,
+              "ci95_low": 0.3876404439835522,
+              "ci95_high": 0.49517988501525323,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.023333006538450718,
+              "p95": 0.06731606554239987,
+              "mean": 0.03361288796771656,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005208014044910669,
+              "p95": 0.006462313467636704,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3548396300669027,
+              "ci95_low": 0.2676734307359307,
+              "ci95_high": 0.4552495818575363,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5264246359700906,
+              "ci95_low": 0.428667994883904,
+              "ci95_high": 0.629530204643841,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.22542207792207794,
+              "ci95_low": 0.14603409090909092,
+              "ci95_high": 0.3159705086580087,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.44064855448711976,
+              "ci95_low": 0.3876404439835522,
+              "ci95_high": 0.49517988501525323,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.021332991309463978,
+              "p95": 0.06622478831559415,
+              "mean": 0.03172801701690663,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.00504200579598546,
+              "p95": 0.005303625948727131,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9840790683330285,
+              "ci95_low": 0.9692251494846416,
+              "ci95_high": 0.9950927166302994,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02962502185255289,
+              "p95": 0.16567950369790135,
+              "mean": 0.05121285476806489,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0028750509954988956,
+              "p95": 0.0035081000532954927,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 2,
+        "tau": 0.5543901920318604,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018874998204410076,
+              "p95": 0.16137489583343206,
+              "mean": 0.04105688792399385,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3548396300669027,
+              "ci95_low": 0.2676734307359307,
+              "ci95_high": 0.4552495818575363,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.13837662337662335,
+              "ci95_low": 0.06786363636363638,
+              "ci95_high": 0.21805303030303028,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.5664223220576149,
+              "ci95_low": 0.5109777771581218,
+              "ci95_high": 0.6208655594131416,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.026124995201826096,
+              "p95": 0.08033750345930454,
+              "mean": 0.038597685157914056,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005333044100552797,
+              "p95": 0.006341817788779735,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3548396300669027,
+              "ci95_low": 0.2676734307359307,
+              "ci95_high": 0.4552495818575363,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.13837662337662335,
+              "ci95_low": 0.06786363636363638,
+              "ci95_high": 0.21805303030303028,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.5664223220576149,
+              "ci95_low": 0.5109777771581218,
+              "ci95_high": 0.6208655594131416,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02400000812485814,
+              "p95": 0.06837497930973765,
+              "mean": 0.03321441631256179,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005292007699608803,
+              "p95": 0.005500001134350896,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9840790683330285,
+              "ci95_low": 0.9692251494846416,
+              "ci95_high": 0.9950927166302994,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.028958020266145468,
+              "p95": 0.20686251809820486,
+              "mean": 0.06107505495575341,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0030410010367631912,
+              "p95": 0.004566716961562632,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 3,
+        "tau": 0.5543901920318604,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.019915984012186527,
+              "p95": 0.1554295013193034,
+              "mean": 0.04290372598916292,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3512032664305392,
+              "ci95_low": 0.2627298553719008,
+              "ci95_high": 0.452556326249508,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.11077922077922078,
+              "ci95_low": 0.047605519480519484,
+              "ci95_high": 0.1855005411255411,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6799364205717031,
+              "ci95_low": 0.6328068224687118,
+              "ci95_high": 0.7246722127535262,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.026209047064185143,
+              "p95": 0.09685831610113364,
+              "mean": 0.04046904240650209,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005375011824071407,
+              "p95": 0.006591802230104803,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3512032664305392,
+              "ci95_low": 0.2627298553719008,
+              "ci95_high": 0.452556326249508,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.11077922077922078,
+              "ci95_low": 0.047605519480519484,
+              "ci95_high": 0.1855005411255411,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6799364205717031,
+              "ci95_low": 0.6328068224687118,
+              "ci95_high": 0.7246722127535262,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02716702874749899,
+              "p95": 0.12176258605904852,
+              "mean": 0.04907950907098976,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005458015948534012,
+              "p95": 0.0066749344114214165,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9840790683330285,
+              "ci95_low": 0.9692251494846416,
+              "ci95_high": 0.9950927166302994,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.026458001229912043,
+              "p95": 0.17291691619902794,
+              "mean": 0.05179247501390902,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002874992787837982,
+              "p95": 0.003583286888897419,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 1,
+        "tau": 0.5543901920318604,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.01845805672928691,
+              "p95": 0.13894128496758584,
+              "mean": 0.037771906830709086,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5356670602125148,
+              "ci95_low": 0.4396998229043684,
+              "ci95_high": 0.6425242522628887,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.028852813852813852,
+              "ci95_low": 0.008181818181818182,
+              "ci95_high": 0.05286201298701299,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.7647266226141151,
+              "ci95_low": 0.7197620619287118,
+              "ci95_high": 0.8120951123781,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.027333036996424198,
+              "p95": 0.13405012432485802,
+              "mean": 0.04131213380870494,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004916975740343332,
+              "p95": 0.005562463775277136,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3548396300669027,
+              "ci95_low": 0.2676734307359307,
+              "ci95_high": 0.4552495818575363,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5264246359700906,
+              "ci95_low": 0.428667994883904,
+              "ci95_high": 0.629530204643841,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.22542207792207794,
+              "ci95_low": 0.14603409090909092,
+              "ci95_high": 0.3159705086580087,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.44064855448711976,
+              "ci95_low": 0.3876404439835522,
+              "ci95_high": 0.49517988501525323,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02174999099224806,
+              "p95": 0.057721300981938825,
+              "mean": 0.02959999679164453,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.00508397351950407,
+              "p95": 0.005332985892891884,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9942420096399487,
+              "ci95_low": 0.9830756115827582,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.024957989808171988,
+              "p95": 0.14705001958645822,
+              "mean": 0.044640167404643515,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002749962732195854,
+              "p95": 0.0034792290534824116,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 2,
+        "tau": 0.5543901920318604,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.019791012164205313,
+              "p95": 0.1491534989327187,
+              "mean": 0.04537729440595616,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5379397874852421,
+              "ci95_low": 0.44197255017709564,
+              "ci95_high": 0.6455810704447068,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0022727272727272726,
+              "ci95_low": 0.0,
+              "ci95_high": 0.006818181818181818,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.88152849029479,
+              "ci95_low": 0.8506026406857254,
+              "ci95_high": 0.9093818627595884,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02645899076014757,
+              "p95": 0.12819997500628202,
+              "mean": 0.04197354745966467,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.00500003807246685,
+              "p95": 0.005549786146730184,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3548396300669027,
+              "ci95_low": 0.2676734307359307,
+              "ci95_high": 0.4552495818575363,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.13837662337662335,
+              "ci95_low": 0.06786363636363638,
+              "ci95_high": 0.21805303030303028,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.5664223220576149,
+              "ci95_low": 0.5109777771581218,
+              "ci95_high": 0.6208655594131416,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.025874993298202753,
+              "p95": 0.07398753077723086,
+              "mean": 0.0370660267600959,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005459005478769541,
+              "p95": 0.006245472468435764,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9942420096399487,
+              "ci95_low": 0.9830756115827582,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.025957997422665358,
+              "p95": 0.16995361074805193,
+              "mean": 0.04993860334665938,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0027500209398567677,
+              "p95": 0.0031793140806257725,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 3,
+        "tau": 0.5543901920318604,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.019916973542422056,
+              "p95": 0.13855822035111431,
+              "mean": 0.04012883132831617,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.025292043574154377,
+              "p95": 0.14740368351340236,
+              "mean": 0.04526816139167005,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.003333028871566057,
+              "p95": 0.0036498997360467906,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3512032664305392,
+              "ci95_low": 0.2627298553719008,
+              "ci95_high": 0.452556326249508,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.11077922077922078,
+              "ci95_low": 0.047605519480519484,
+              "ci95_high": 0.1855005411255411,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6799364205717031,
+              "ci95_low": 0.6328068224687118,
+              "ci95_high": 0.7246722127535262,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.026334018912166357,
+              "p95": 0.10570883168838899,
+              "mean": 0.041331707457588476,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005332985892891884,
+              "p95": 0.00567511306144297,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9942420096399487,
+              "ci95_low": 0.9830756115827582,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02500001573935151,
+              "p95": 0.15281611704267506,
+              "mean": 0.04626441831615838,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0027500209398567677,
+              "p95": 0.0029590039048343897,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 1,
+        "tau": 0.5935922265052795,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018624996300786734,
+              "p95": 0.1561081036925311,
+              "mean": 0.03793565238910643,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.2081218024399843,
+              "ci95_low": 0.1377371359700905,
+              "ci95_high": 0.28292515249901606,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35438508461235735,
+              "ci95_low": 0.26704574970484063,
+              "ci95_high": 0.44895083136560415,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.47915190869736324,
+              "ci95_low": 0.38382610192837463,
+              "ci95_high": 0.5820107241243605,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.41553423848878396,
+              "ci95_low": 0.30766531385281387,
+              "ci95_high": 0.5143371212121213,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.23058893736599845,
+              "ci95_low": 0.19050800304666984,
+              "ci95_high": 0.2725032917143839,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.017542042769491673,
+              "p95": 0.04260797868482768,
+              "mean": 0.023081784390590408,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005124951712787151,
+              "p95": 0.0057752011343836784,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.2081218024399843,
+              "ci95_low": 0.1377371359700905,
+              "ci95_high": 0.28292515249901606,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35438508461235735,
+              "ci95_low": 0.26704574970484063,
+              "ci95_high": 0.44895083136560415,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.47915190869736324,
+              "ci95_low": 0.38382610192837463,
+              "ci95_high": 0.5820107241243605,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.41553423848878396,
+              "ci95_low": 0.30766531385281387,
+              "ci95_high": 0.5143371212121213,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.23058893736599845,
+              "ci95_low": 0.19050800304666984,
+              "ci95_high": 0.2725032917143839,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.017041980754584074,
+              "p95": 0.041142071131616796,
+              "mean": 0.021534107244488867,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005082983989268541,
+              "p95": 0.005333044100552797,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21659287682014955,
+              "ci95_low": 0.1498598484848485,
+              "ci95_high": 0.2861099960645415,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5561216056670603,
+              "ci95_low": 0.4586628295946478,
+              "ci95_high": 0.6589669913419913,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.8880637765804026,
+              "ci95_low": 0.8306300352991098,
+              "ci95_high": 0.9352905958349585,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.024958979338407516,
+              "p95": 0.13712501386180492,
+              "mean": 0.04292730855840174,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002874992787837982,
+              "p95": 0.0031793140806257725,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 2,
+        "tau": 0.5935922265052795,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.01833302667364478,
+              "p95": 0.14328740071505258,
+              "mean": 0.03860981986773285,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.2102430145611964,
+              "ci95_low": 0.14202208776072411,
+              "ci95_high": 0.28271935261707987,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35817296340023613,
+              "ci95_low": 0.2640083874458875,
+              "ci95_high": 0.4594944411648957,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5082565918929556,
+              "ci95_low": 0.4120512593467138,
+              "ci95_high": 0.6096602715466352,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.3227312081857536,
+              "ci95_low": 0.2274188803620622,
+              "ci95_high": 0.42873765249901613,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.32512766455262043,
+              "ci95_low": 0.2816353548570737,
+              "ci95_high": 0.36913190082224867,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.021875021047890186,
+              "p95": 0.06317512015812095,
+              "mean": 0.028580379545349966,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005249981768429279,
+              "p95": 0.005720567423850298,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.2102430145611964,
+              "ci95_low": 0.14202208776072411,
+              "ci95_high": 0.28271935261707987,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35817296340023613,
+              "ci95_low": 0.2640083874458875,
+              "ci95_high": 0.4594944411648957,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5082565918929556,
+              "ci95_low": 0.4120512593467138,
+              "ci95_high": 0.6096602715466352,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.3227312081857536,
+              "ci95_low": 0.2274188803620622,
+              "ci95_high": 0.42873765249901613,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.32512766455262043,
+              "ci95_low": 0.2816353548570737,
+              "ci95_high": 0.36913190082224867,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.022666004952043295,
+              "p95": 0.05452520563267171,
+              "mean": 0.02725142033093355,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005249981768429279,
+              "p95": 0.005458015948534012,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21659287682014955,
+              "ci95_low": 0.1498598484848485,
+              "ci95_high": 0.2861099960645415,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5561216056670603,
+              "ci95_low": 0.4586628295946478,
+              "ci95_high": 0.6589669913419913,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.8880637765804026,
+              "ci95_low": 0.8306300352991098,
+              "ci95_high": 0.9352905958349585,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02879201201722026,
+              "p95": 0.1383919094223526,
+              "mean": 0.04610158397223462,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0028329668566584587,
+              "p95": 0.003207998815923929,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 3,
+        "tau": 0.5935922265052795,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018291000742465258,
+              "p95": 0.1576083013787861,
+              "mean": 0.03704927777024833,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21053227075954353,
+              "ci95_low": 0.14031254919323097,
+              "ci95_high": 0.2838272087760724,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3766578118850846,
+              "ci95_low": 0.2884543732782369,
+              "ci95_high": 0.47859885379771744,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5083943329397875,
+              "ci95_low": 0.41149134199134196,
+              "ci95_high": 0.6090524399842582,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.23745375836284927,
+              "ci95_low": 0.15254471664698935,
+              "ci95_high": 0.3377046438410074,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.45731196096777166,
+              "ci95_low": 0.40540963399488933,
+              "ci95_high": 0.5066055976496068,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02037500962615013,
+              "p95": 0.07727881893515567,
+              "mean": 0.030658254399895668,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005332985892891884,
+              "p95": 0.0062498205807059995,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21053227075954353,
+              "ci95_low": 0.14031254919323097,
+              "ci95_high": 0.2838272087760724,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3766578118850846,
+              "ci95_low": 0.2884543732782369,
+              "ci95_high": 0.47859885379771744,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5083943329397875,
+              "ci95_low": 0.41149134199134196,
+              "ci95_high": 0.6090524399842582,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.23745375836284927,
+              "ci95_low": 0.15254471664698935,
+              "ci95_high": 0.3377046438410074,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.45731196096777166,
+              "ci95_low": 0.40540963399488933,
+              "ci95_high": 0.5066055976496068,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.021458021365106106,
+              "p95": 0.1031412277370691,
+              "mean": 0.033581779677082195,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005249981768429279,
+              "p95": 0.006854411913082003,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21659287682014955,
+              "ci95_low": 0.1498598484848485,
+              "ci95_high": 0.2861099960645415,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5561216056670603,
+              "ci95_low": 0.4586628295946478,
+              "ci95_high": 0.6589669913419913,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.8880637765804026,
+              "ci95_low": 0.8306300352991098,
+              "ci95_high": 0.9352905958349585,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.028999987989664078,
+              "p95": 0.13519206549972265,
+              "mean": 0.04706517793238163,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002833025064319372,
+              "p95": 0.003441883018240332,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 1,
+        "tau": 0.5935922265052795,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.01954101026058197,
+              "p95": 0.14427850255742614,
+              "mean": 0.04015679746358232,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.18298406139315232,
+              "ci95_low": 0.12609516430539155,
+              "ci95_high": 0.24756992817788273,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.324038764266037,
+              "ci95_low": 0.2398128197560016,
+              "ci95_high": 0.42286806375442737,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.45775875639512,
+              "ci95_low": 0.3641946576151121,
+              "ci95_high": 0.565513085399449,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.19566706021251476,
+              "ci95_low": 0.1157288961038961,
+              "ci95_high": 0.28998671782762697,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6247315630180994,
+              "ci95_low": 0.5672625729988826,
+              "ci95_high": 0.6848635092844216,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.028583977837115526,
+              "p95": 0.07932070293463758,
+              "mean": 0.03601212625984441,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004957953933626413,
+              "p95": 0.005450012395158409,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.2081218024399843,
+              "ci95_low": 0.1377371359700905,
+              "ci95_high": 0.28292515249901606,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35438508461235735,
+              "ci95_low": 0.26704574970484063,
+              "ci95_high": 0.44895083136560415,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.47915190869736324,
+              "ci95_low": 0.38382610192837463,
+              "ci95_high": 0.5820107241243605,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.41553423848878396,
+              "ci95_low": 0.30766531385281387,
+              "ci95_high": 0.5143371212121213,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.23058893736599845,
+              "ci95_low": 0.19050800304666984,
+              "ci95_high": 0.2725032917143839,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.017666956409811974,
+              "p95": 0.053079187637194984,
+              "mean": 0.02431596036661755,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005125009920448065,
+              "p95": 0.005428894655779004,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5530913026367572,
+              "ci95_low": 0.4562894037780401,
+              "ci95_high": 0.6575048209366392,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9545819356790962,
+              "ci95_low": 0.9124408127447265,
+              "ci95_high": 0.9868733490375422,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.025709043256938457,
+              "p95": 0.20621250150725212,
+              "mean": 0.04993869224563241,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0027909991331398487,
+              "p95": 0.0032206065952777863,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 2,
+        "tau": 0.5935922265052795,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.01912500010803342,
+              "p95": 0.1501126040238881,
+              "mean": 0.04099838181652806,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3512032664305392,
+              "ci95_low": 0.2627298553719008,
+              "ci95_high": 0.452556326249508,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5197579693034239,
+              "ci95_low": 0.42366105863833137,
+              "ci95_high": 0.6271400531286894,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.06159090909090909,
+              "ci95_low": 0.014994318181818182,
+              "ci95_high": 0.12093749999999998,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.7936098976183119,
+              "ci95_low": 0.7500639352565437,
+              "ci95_high": 0.8346750566467306,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.027375004719942808,
+              "p95": 0.14152941294014426,
+              "mean": 0.043953860982913866,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.00504200579598546,
+              "p95": 0.005566893378272653,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.2102430145611964,
+              "ci95_low": 0.14202208776072411,
+              "ci95_high": 0.28271935261707987,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35817296340023613,
+              "ci95_low": 0.2640083874458875,
+              "ci95_high": 0.4594944411648957,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5082565918929556,
+              "ci95_low": 0.4120512593467138,
+              "ci95_high": 0.6096602715466352,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.3227312081857536,
+              "ci95_low": 0.2274188803620622,
+              "ci95_high": 0.42873765249901613,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.32512766455262043,
+              "ci95_low": 0.2816353548570737,
+              "ci95_high": 0.36913190082224867,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.021792016923427582,
+              "p95": 0.06950442329980432,
+              "mean": 0.02993638098070567,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005207955837249756,
+              "p95": 0.005637307185679674,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5530913026367572,
+              "ci95_low": 0.4562894037780401,
+              "ci95_high": 0.6575048209366392,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9545819356790962,
+              "ci95_low": 0.9124408127447265,
+              "ci95_high": 0.9868733490375422,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.025374989490956068,
+              "p95": 0.17974978545680564,
+              "mean": 0.05389089082283052,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0027909991331398487,
+              "p95": 0.0030955765396356583,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 3,
+        "tau": 0.5935922265052795,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018291990272700787,
+              "p95": 0.15290899318642848,
+              "mean": 0.04000229316509583,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02420897362753749,
+              "p95": 0.1405335904564703,
+              "mean": 0.04303110975094817,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.003207998815923929,
+              "p95": 0.003591104177758097,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21053227075954353,
+              "ci95_low": 0.14031254919323097,
+              "ci95_high": 0.2838272087760724,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3766578118850846,
+              "ci95_low": 0.2884543732782369,
+              "ci95_high": 0.47859885379771744,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5083943329397875,
+              "ci95_low": 0.41149134199134196,
+              "ci95_high": 0.6090524399842582,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.23745375836284927,
+              "ci95_low": 0.15254471664698935,
+              "ci95_high": 0.3377046438410074,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.45731196096777166,
+              "ci95_low": 0.40540963399488933,
+              "ci95_high": 0.5066055976496068,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.022042018827050924,
+              "p95": 0.09915448608808185,
+              "mean": 0.035588598852469164,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005458015948534012,
+              "p95": 0.007778499275445937,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5530913026367572,
+              "ci95_low": 0.4562894037780401,
+              "ci95_high": 0.6575048209366392,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.9545819356790962,
+              "ci95_low": 0.9124408127447265,
+              "ci95_high": 0.9868733490375422,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02400000812485814,
+              "p95": 0.16139990766532664,
+              "mean": 0.04393794489177791,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0027500209398567677,
+              "p95": 0.0030791852623224254,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 1,
+        "tau": 0.6276344805955887,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018041988369077444,
+              "p95": 0.13720002025365774,
+              "mean": 0.03487956180999225,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.18983766233766236,
+              "ci95_low": 0.12836011904761904,
+              "ci95_high": 0.2614199134199134,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.24985930735930736,
+              "ci95_low": 0.1747697510822511,
+              "ci95_high": 0.33482305194805195,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.29922077922077917,
+              "ci95_low": 0.20971049783549783,
+              "ci95_high": 0.3902196969696969,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.6842207792207792,
+              "ci95_low": 0.590008658008658,
+              "ci95_high": 0.7766385281385281,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.1106560046738563,
+              "ci95_low": 0.08157483137278027,
+              "ci95_high": 0.14266107060993416,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.014749995898455381,
+              "p95": 0.031983095686882713,
+              "mean": 0.01900592522526329,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004665984306484461,
+              "p95": 0.005429331213235855,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.18983766233766236,
+              "ci95_low": 0.12836011904761904,
+              "ci95_high": 0.2614199134199134,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.24985930735930736,
+              "ci95_low": 0.1747697510822511,
+              "ci95_high": 0.33482305194805195,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.29922077922077917,
+              "ci95_low": 0.20971049783549783,
+              "ci95_high": 0.3902196969696969,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.6842207792207792,
+              "ci95_low": 0.590008658008658,
+              "ci95_high": 0.7766385281385281,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.1106560046738563,
+              "ci95_low": 0.08157483137278027,
+              "ci95_high": 0.14266107060993416,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.014750054106116295,
+              "p95": 0.033871410414576524,
+              "mean": 0.01874849602410739,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004542001988738775,
+              "p95": 0.0059831771068274975,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.255986816214089,
+              "ci95_low": 0.17832873376623376,
+              "ci95_high": 0.3389191509248327,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.4557487209759937,
+              "ci95_low": 0.35792225009838646,
+              "ci95_high": 0.5520847845336481,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.6391519086973632,
+              "ci95_low": 0.5486140299094844,
+              "ci95_high": 0.727681670602125,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6316172709125107,
+              "ci95_low": 0.5634526795202349,
+              "ci95_high": 0.7017653990118784,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02679199678823352,
+              "p95": 0.10595798376016317,
+              "mean": 0.03785827006636695,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0029159709811210632,
+              "p95": 0.0035829725675284863,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 2,
+        "tau": 0.6276344805955887,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.019041995983570814,
+              "p95": 0.15626252279616842,
+              "mean": 0.04016303520819003,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20360389610389612,
+              "ci95_low": 0.14590151515151512,
+              "ci95_high": 0.270245670995671,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.2800108225108225,
+              "ci95_low": 0.20798403679653682,
+              "ci95_high": 0.3634001623376622,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.3454112554112554,
+              "ci95_low": 0.2627110389610389,
+              "ci95_high": 0.43677976190476187,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.6221753246753247,
+              "ci95_low": 0.526420725108225,
+              "ci95_high": 0.7123330627705627,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.17412815597828726,
+              "ci95_low": 0.14151958527887484,
+              "ci95_high": 0.21166417306045282,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.017125043086707592,
+              "p95": 0.04768752260133624,
+              "mean": 0.023401530713520267,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005332985892891884,
+              "p95": 0.005762593355029821,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20360389610389612,
+              "ci95_low": 0.14590151515151512,
+              "ci95_high": 0.270245670995671,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.2800108225108225,
+              "ci95_low": 0.20798403679653682,
+              "ci95_high": 0.3634001623376622,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.3454112554112554,
+              "ci95_low": 0.2627110389610389,
+              "ci95_high": 0.43677976190476187,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.6221753246753247,
+              "ci95_low": 0.526420725108225,
+              "ci95_high": 0.7123330627705627,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.17412815597828726,
+              "ci95_low": 0.14151958527887484,
+              "ci95_high": 0.21166417306045282,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.017083948478102684,
+              "p95": 0.07159552187658827,
+              "mean": 0.026309127199717543,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005292007699608803,
+              "p95": 0.005678599700331688,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.255986816214089,
+              "ci95_low": 0.17832873376623376,
+              "ci95_high": 0.3389191509248327,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.4557487209759937,
+              "ci95_low": 0.35792225009838646,
+              "ci95_high": 0.5520847845336481,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.6391519086973632,
+              "ci95_low": 0.5486140299094844,
+              "ci95_high": 0.727681670602125,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6316172709125107,
+              "ci95_low": 0.5634526795202349,
+              "ci95_high": 0.7017653990118784,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02154201501980424,
+              "p95": 0.07444193470291789,
+              "mean": 0.031109088608487087,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002874992787837982,
+              "p95": 0.003304303390905261,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "leaf",
+        "lambda": 3,
+        "tau": 0.6276344805955887,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018416962120682,
+              "p95": 0.20136691746301896,
+              "mean": 0.04320989087732001,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.22628984651711928,
+              "ci95_low": 0.15536747343565524,
+              "ci95_high": 0.3019714187327824,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3199911452184179,
+              "ci95_low": 0.24296357241243602,
+              "ci95_high": 0.4019261855568674,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.43703069657615107,
+              "ci95_low": 0.3393889708776073,
+              "ci95_high": 0.532642611176702,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.4360901219992128,
+              "ci95_low": 0.33569185360094445,
+              "ci95_high": 0.5332851731601732,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.30018090749168586,
+              "ci95_low": 0.2524846526468841,
+              "ci95_high": 0.35135557191377975,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.020208011846989393,
+              "p95": 0.08741690544411529,
+              "mean": 0.03243332453580065,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005458015948534012,
+              "p95": 0.006349891191348433,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.22628984651711928,
+              "ci95_low": 0.15536747343565524,
+              "ci95_high": 0.3019714187327824,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3199911452184179,
+              "ci95_low": 0.24296357241243602,
+              "ci95_high": 0.4019261855568674,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.43703069657615107,
+              "ci95_low": 0.3393889708776073,
+              "ci95_high": 0.532642611176702,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.4360901219992128,
+              "ci95_low": 0.33569185360094445,
+              "ci95_high": 0.5332851731601732,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.30018090749168586,
+              "ci95_low": 0.2524846526468841,
+              "ci95_high": 0.35135557191377975,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02012500772252679,
+              "p95": 0.08700009784661225,
+              "mean": 0.031043203886259686,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005332985892891884,
+              "p95": 0.005708017852157354,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.255986816214089,
+              "ci95_low": 0.17832873376623376,
+              "ci95_high": 0.3389191509248327,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.4557487209759937,
+              "ci95_low": 0.35792225009838646,
+              "ci95_high": 0.5520847845336481,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.6391519086973632,
+              "ci95_low": 0.5486140299094844,
+              "ci95_high": 0.727681670602125,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.6316172709125107,
+              "ci95_low": 0.5634526795202349,
+              "ci95_high": 0.7017653990118784,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.022000051103532314,
+              "p95": 0.06982499035075303,
+              "mean": 0.030571254054931076,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002833025064319372,
+              "p95": 0.0033036107197403908,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 1,
+        "tau": 0.6276344805955887,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.01795799471437931,
+              "p95": 0.16213378403335738,
+              "mean": 0.03953718432140621,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1820887445887446,
+              "ci95_low": 0.11897781385281384,
+              "ci95_high": 0.24795752164502163,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.30044372294372296,
+              "ci95_low": 0.2157096861471862,
+              "ci95_high": 0.39766369047619043,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.4143290043290043,
+              "ci95_low": 0.324163961038961,
+              "ci95_high": 0.521237554112554,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.30675619834710743,
+              "ci95_low": 0.20802668732782367,
+              "ci95_high": 0.4107124655647383,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.5328560500415835,
+              "ci95_low": 0.47006709301813476,
+              "ci95_high": 0.5984020064227529,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.019832979887723923,
+              "p95": 0.05904167192056765,
+              "mean": 0.026771999810906975,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004875008016824722,
+              "p95": 0.005433184560388326,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.18983766233766236,
+              "ci95_low": 0.12836011904761904,
+              "ci95_high": 0.2614199134199134,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.24985930735930736,
+              "ci95_low": 0.1747697510822511,
+              "ci95_high": 0.33482305194805195,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.29922077922077917,
+              "ci95_low": 0.20971049783549783,
+              "ci95_high": 0.3902196969696969,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.6842207792207792,
+              "ci95_low": 0.590008658008658,
+              "ci95_high": 0.7766385281385281,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.1106560046738563,
+              "ci95_low": 0.08157483137278027,
+              "ci95_high": 0.14266107060993416,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.014499993994832039,
+              "p95": 0.035637599648907774,
+              "mean": 0.01816365084695545,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004250032361596823,
+              "p95": 0.005482987035065888,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21659287682014955,
+              "ci95_low": 0.1498598484848485,
+              "ci95_high": 0.2861099960645415,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.383021448248721,
+              "ci95_low": 0.2941954447068084,
+              "ci95_high": 0.48269453463203454,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5667276662731208,
+              "ci95_low": 0.47111304604486415,
+              "ci95_high": 0.6661335596221959,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.8220378766179024,
+              "ci95_low": 0.7578628373130682,
+              "ci95_high": 0.8855848257250931,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02358300844207406,
+              "p95": 0.09659561328589913,
+              "mean": 0.036953052040189505,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002707995008677244,
+              "p95": 0.0031376024708151817,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 2,
+        "tau": 0.6276344805955887,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018417020328342915,
+              "p95": 0.1504125015344464,
+              "mean": 0.03886441805992614,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20750196772924048,
+              "ci95_low": 0.13672919126328217,
+              "ci95_high": 0.28133084907516726,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.35423356946084217,
+              "ci95_low": 0.2673243555686738,
+              "ci95_high": 0.45360153482880766,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.506879181424636,
+              "ci95_low": 0.4085348288075561,
+              "ci95_high": 0.6133219205037387,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.10128787878787877,
+              "ci95_low": 0.04287689393939394,
+              "ci95_high": 0.17244318181818183,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.7292224791407105,
+              "ci95_low": 0.6805834242225576,
+              "ci95_high": 0.7774501036961204,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02300000051036477,
+              "p95": 0.1017248781863597,
+              "mean": 0.03902045692401854,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.004958012141287327,
+              "p95": 0.00555430306121707,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.20360389610389612,
+              "ci95_low": 0.14590151515151512,
+              "ci95_high": 0.270245670995671,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.2800108225108225,
+              "ci95_low": 0.20798403679653682,
+              "ci95_high": 0.3634001623376622,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.3454112554112554,
+              "ci95_low": 0.2627110389610389,
+              "ci95_high": 0.43677976190476187,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.6221753246753247,
+              "ci95_low": 0.526420725108225,
+              "ci95_high": 0.7123330627705627,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.17412815597828726,
+              "ci95_low": 0.14151958527887484,
+              "ci95_high": 0.21166417306045282,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.016667007002979517,
+              "p95": 0.03881681477650998,
+              "mean": 0.02105905335735191,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005165988113731146,
+              "p95": 0.005375011824071407,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21659287682014955,
+              "ci95_low": 0.1498598484848485,
+              "ci95_high": 0.2861099960645415,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.383021448248721,
+              "ci95_low": 0.2941954447068084,
+              "ci95_high": 0.48269453463203454,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5667276662731208,
+              "ci95_low": 0.47111304604486415,
+              "ci95_high": 0.6661335596221959,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.8220378766179024,
+              "ci95_low": 0.7578628373130682,
+              "ci95_high": 0.8855848257250931,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.02300000051036477,
+              "p95": 0.09759988170117136,
+              "mean": 0.03479537977413698,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002667016815394163,
+              "p95": 0.0030543014872819185,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      },
+      {
+        "level": "pillar",
+        "lambda": 3,
+        "tau": 0.6276344805955887,
+        "metrics": {
+          "A": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.018291990272700787,
+              "p95": 0.15076242270879384,
+              "mean": 0.03812192642891949,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0,
+              "p95": 0.0,
+              "n": 55
+            }
+          },
+          "B": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.1984110586383314,
+              "ci95_low": 0.13475843663911846,
+              "ci95_high": 0.2656557211727666,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.36938508461235736,
+              "ci95_low": 0.27921920503738684,
+              "ci95_high": 0.4704583579299488,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.534909484454939,
+              "ci95_low": 0.43894224714679253,
+              "ci95_high": 0.6421194411648957,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 1.0,
+              "ci95_low": 1.0,
+              "ci95_high": 1.0,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.024667009711265564,
+              "p95": 0.15165387885644982,
+              "mean": 0.041931095025078816,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.0032500247471034527,
+              "p95": 0.0038162048440426584,
+              "n": 55
+            }
+          },
+          "D": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.22628984651711928,
+              "ci95_low": 0.15536747343565524,
+              "ci95_high": 0.3019714187327824,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.3199911452184179,
+              "ci95_low": 0.24296357241243602,
+              "ci95_high": 0.4019261855568674,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.43703069657615107,
+              "ci95_low": 0.3393889708776073,
+              "ci95_high": 0.532642611176702,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.4360901219992128,
+              "ci95_low": 0.33569185360094445,
+              "ci95_high": 0.5332851731601732,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.30018090749168586,
+              "ci95_low": 0.2524846526468841,
+              "ci95_high": 0.35135557191377975,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.01812499249354005,
+              "p95": 0.06742489640600961,
+              "mean": 0.026545506394044918,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.005209003575146198,
+              "p95": 0.0057041936088353395,
+              "n": 55
+            }
+          },
+          "E": {
+            "n_queries": 55,
+            "recall@5": {
+              "mean": 0.21659287682014955,
+              "ci95_low": 0.1498598484848485,
+              "ci95_high": 0.2861099960645415,
+              "n": 55
+            },
+            "recall@10": {
+              "mean": 0.383021448248721,
+              "ci95_low": 0.2941954447068084,
+              "ci95_high": 0.48269453463203454,
+              "n": 55
+            },
+            "recall@20": {
+              "mean": 0.5667276662731208,
+              "ci95_low": 0.47111304604486415,
+              "ci95_high": 0.6661335596221959,
+              "n": 55
+            },
+            "miss_rate": {
+              "mean": 0.0,
+              "ci95_low": 0.0,
+              "ci95_high": 0.0,
+              "n": 55
+            },
+            "selectivity": {
+              "mean": 0.8220378766179024,
+              "ci95_low": 0.7578628373130682,
+              "ci95_high": 0.8855848257250931,
+              "n": 55
+            },
+            "latency_ms": {
+              "median": 0.026749970857053995,
+              "p95": 0.11007951688952736,
+              "mean": 0.04259696632454341,
+              "n": 55
+            },
+            "topic_scoring_ms": {
+              "median": 0.002792046871036291,
+              "p95": 0.003917026333510876,
+              "n": 55
+            }
+          }
+        },
+        "n_core_dev_queries": 55
+      }
+    ],
+    "frozen_metrics": {
+      "core_dev": {
+        "A": {
+          "n_queries": 55,
+          "recall@5": {
+            "mean": 0.1984110586383314,
+            "ci95_low": 0.13475843663911846,
+            "ci95_high": 0.2656557211727666,
+            "n": 55
+          },
+          "recall@10": {
+            "mean": 0.36938508461235736,
+            "ci95_low": 0.27921920503738684,
+            "ci95_high": 0.4704583579299488,
+            "n": 55
+          },
+          "recall@20": {
+            "mean": 0.534909484454939,
+            "ci95_low": 0.43894224714679253,
+            "ci95_high": 0.6421194411648957,
+            "n": 55
+          },
+          "miss_rate": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0,
+            "n": 55
+          },
+          "selectivity": {
+            "mean": 1.0,
+            "ci95_low": 1.0,
+            "ci95_high": 1.0,
+            "n": 55
+          },
+          "latency_ms": {
+            "median": 0.01912500010803342,
+            "p95": 0.15827129245735644,
+            "mean": 0.04223332613367926,
+            "n": 55
+          },
+          "topic_scoring_ms": {
+            "median": 0.0,
+            "p95": 0.0,
+            "n": 55
+          }
+        },
+        "B": {
+          "n_queries": 55,
+          "recall@5": {
+            "mean": 0.21053227075954353,
+            "ci95_low": 0.14031254919323097,
+            "ci95_high": 0.2838272087760724,
+            "n": 55
+          },
+          "recall@10": {
+            "mean": 0.3766578118850846,
+            "ci95_low": 0.2884543732782369,
+            "ci95_high": 0.47859885379771744,
+            "n": 55
+          },
+          "recall@20": {
+            "mean": 0.5083943329397875,
+            "ci95_low": 0.41149134199134196,
+            "ci95_high": 0.6090524399842582,
+            "n": 55
+          },
+          "miss_rate": {
+            "mean": 0.23745375836284927,
+            "ci95_low": 0.15254471664698935,
+            "ci95_high": 0.3377046438410074,
+            "n": 55
+          },
+          "selectivity": {
+            "mean": 0.45731196096777166,
+            "ci95_low": 0.40540963399488933,
+            "ci95_high": 0.5066055976496068,
+            "n": 55
+          },
+          "latency_ms": {
+            "median": 0.0213750172406435,
+            "p95": 0.10862940107472228,
+            "mean": 0.03397653027522293,
+            "n": 55
+          },
+          "topic_scoring_ms": {
+            "median": 0.005332985892891884,
+            "p95": 0.005816912744194269,
+            "n": 55
+          }
+        },
+        "D": {
+          "n_queries": 55,
+          "recall@5": {
+            "mean": 0.21053227075954353,
+            "ci95_low": 0.14031254919323097,
+            "ci95_high": 0.2838272087760724,
+            "n": 55
+          },
+          "recall@10": {
+            "mean": 0.3766578118850846,
+            "ci95_low": 0.2884543732782369,
+            "ci95_high": 0.47859885379771744,
+            "n": 55
+          },
+          "recall@20": {
+            "mean": 0.5083943329397875,
+            "ci95_low": 0.41149134199134196,
+            "ci95_high": 0.6090524399842582,
+            "n": 55
+          },
+          "miss_rate": {
+            "mean": 0.23745375836284927,
+            "ci95_low": 0.15254471664698935,
+            "ci95_high": 0.3377046438410074,
+            "n": 55
+          },
+          "selectivity": {
+            "mean": 0.45731196096777166,
+            "ci95_low": 0.40540963399488933,
+            "ci95_high": 0.5066055976496068,
+            "n": 55
+          },
+          "latency_ms": {
+            "median": 0.024082954041659832,
+            "p95": 0.13227491872385141,
+            "mean": 0.03636198075996204,
+            "n": 55
+          },
+          "topic_scoring_ms": {
+            "median": 0.005416979547590017,
+            "p95": 0.006149901309981942,
+            "n": 55
+          }
+        },
+        "E": {
+          "n_queries": 55,
+          "recall@5": {
+            "mean": 0.21659287682014955,
+            "ci95_low": 0.1498598484848485,
+            "ci95_high": 0.2861099960645415,
+            "n": 55
+          },
+          "recall@10": {
+            "mean": 0.36938508461235736,
+            "ci95_low": 0.27921920503738684,
+            "ci95_high": 0.4704583579299488,
+            "n": 55
+          },
+          "recall@20": {
+            "mean": 0.5561216056670603,
+            "ci95_low": 0.4586628295946478,
+            "ci95_high": 0.6589669913419913,
+            "n": 55
+          },
+          "miss_rate": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0,
+            "n": 55
+          },
+          "selectivity": {
+            "mean": 0.8880637765804026,
+            "ci95_low": 0.8306300352991098,
+            "ci95_high": 0.9352905958349585,
+            "n": 55
+          },
+          "latency_ms": {
+            "median": 0.03149994881823659,
+            "p95": 0.13552141608670323,
+            "mean": 0.048472740772095596,
+            "n": 55
+          },
+          "topic_scoring_ms": {
+            "median": 0.002874992787837982,
+            "p95": 0.003333028871566057,
+            "n": 55
+          }
+        }
+      },
+      "core_test": {
+        "A": {
+          "n_queries": 68,
+          "recall@5": {
+            "mean": 0.34233882947118244,
+            "ci95_low": 0.2631019756387403,
+            "ci95_high": 0.4340120214752567,
+            "n": 68
+          },
+          "recall@10": {
+            "mean": 0.5092399838723368,
+            "ci95_low": 0.42233534133350314,
+            "ci95_high": 0.6015361731813937,
+            "n": 68
+          },
+          "recall@20": {
+            "mean": 0.6268472540531365,
+            "ci95_low": 0.5474352240896359,
+            "ci95_high": 0.7084421420083183,
+            "n": 68
+          },
+          "miss_rate": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0,
+            "n": 68
+          },
+          "selectivity": {
+            "mean": 1.0,
+            "ci95_low": 1.0,
+            "ci95_high": 1.0,
+            "n": 68
+          },
+          "latency_ms": {
+            "median": 0.017978978576138616,
+            "p95": 0.07538980280514802,
+            "mean": 0.031200339435599744,
+            "n": 68
+          },
+          "topic_scoring_ms": {
+            "median": 0.0,
+            "p95": 0.0,
+            "n": 68
+          }
+        },
+        "B": {
+          "n_queries": 68,
+          "recall@5": {
+            "mean": 0.34260143451319924,
+            "ci95_low": 0.26273814828961883,
+            "ci95_high": 0.432933696205755,
+            "n": 68
+          },
+          "recall@10": {
+            "mean": 0.5031475468975469,
+            "ci95_low": 0.41378652597402604,
+            "ci95_high": 0.5991796112384348,
+            "n": 68
+          },
+          "recall@20": {
+            "mean": 0.6360851158645275,
+            "ci95_low": 0.5554500758636788,
+            "ci95_high": 0.727305314171123,
+            "n": 68
+          },
+          "miss_rate": {
+            "mean": 0.17256705712588064,
+            "ci95_low": 0.11355145467277819,
+            "ci95_high": 0.23382151345386637,
+            "n": 68
+          },
+          "selectivity": {
+            "mean": 0.4552121361942487,
+            "ci95_low": 0.4040954313497601,
+            "ci95_high": 0.5053527077806909,
+            "n": 68
+          },
+          "latency_ms": {
+            "median": 0.024395529180765152,
+            "p95": 0.05877224903088063,
+            "mean": 0.03056854321210481,
+            "n": 68
+          },
+          "topic_scoring_ms": {
+            "median": 0.005416979547590017,
+            "p95": 0.0061624887166544795,
+            "n": 68
+          }
+        },
+        "D": {
+          "n_queries": 68,
+          "recall@5": {
+            "mean": 0.34260143451319924,
+            "ci95_low": 0.26273814828961883,
+            "ci95_high": 0.432933696205755,
+            "n": 68
+          },
+          "recall@10": {
+            "mean": 0.5031475468975469,
+            "ci95_low": 0.41378652597402604,
+            "ci95_high": 0.5991796112384348,
+            "n": 68
+          },
+          "recall@20": {
+            "mean": 0.6360851158645275,
+            "ci95_low": 0.5554500758636788,
+            "ci95_high": 0.727305314171123,
+            "n": 68
+          },
+          "miss_rate": {
+            "mean": 0.17256705712588064,
+            "ci95_low": 0.11355145467277819,
+            "ci95_high": 0.23382151345386637,
+            "n": 68
+          },
+          "selectivity": {
+            "mean": 0.4552121361942487,
+            "ci95_low": 0.4040954313497601,
+            "ci95_high": 0.5053527077806909,
+            "n": 68
+          },
+          "latency_ms": {
+            "median": 0.022729509510099888,
+            "p95": 0.04988136061001569,
+            "mean": 0.027764059589518345,
+            "n": 68
+          },
+          "topic_scoring_ms": {
+            "median": 0.005375011824071407,
+            "p95": 0.00562501372769475,
+            "n": 68
+          }
+        },
+        "E": {
+          "n_queries": 68,
+          "recall@5": {
+            "mean": 0.349691770647653,
+            "ci95_low": 0.26692667218402505,
+            "ci95_high": 0.4378181897759103,
+            "n": 68
+          },
+          "recall@10": {
+            "mean": 0.5092399838723368,
+            "ci95_low": 0.42233534133350314,
+            "ci95_high": 0.6015361731813937,
+            "n": 68
+          },
+          "recall@20": {
+            "mean": 0.6562590187590187,
+            "ci95_low": 0.581735394915542,
+            "ci95_high": 0.7375404252610134,
+            "n": 68
+          },
+          "miss_rate": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0,
+            "n": 68
+          },
+          "selectivity": {
+            "mean": 0.8615183674675254,
+            "ci95_low": 0.8154050384513437,
+            "ci95_high": 0.9051812939583189,
+            "n": 68
+          },
+          "latency_ms": {
+            "median": 0.026437483029440045,
+            "p95": 0.09438125125598161,
+            "mean": 0.040447847876588214,
+            "n": 68
+          },
+          "topic_scoring_ms": {
+            "median": 0.002792046871036291,
+            "p95": 0.0034433120163157582,
+            "n": 68
+          }
+        }
+      },
+      "extra": {
+        "A": {
+          "n_queries": 6,
+          "recall@5": {
+            "mean": 0.06635802469135803,
+            "ci95_low": 0.0,
+            "ci95_high": 0.1574074074074074,
+            "n": 6
+          },
+          "recall@10": {
+            "mean": 0.08487654320987655,
+            "ci95_low": 0.0,
+            "ci95_high": 0.20987654320987656,
+            "n": 6
+          },
+          "recall@20": {
+            "mean": 0.14555274971941637,
+            "ci95_low": 0.041666666666666664,
+            "ci95_high": 0.2756734006734006,
+            "n": 6
+          },
+          "miss_rate": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0,
+            "n": 6
+          },
+          "selectivity": {
+            "mean": 1.0,
+            "ci95_low": 1.0,
+            "ci95_high": 1.0,
+            "n": 6
+          },
+          "latency_ms": {
+            "median": 0.025749497581273317,
+            "p95": 0.045707987737841904,
+            "mean": 0.030173318615804117,
+            "n": 6
+          },
+          "topic_scoring_ms": {
+            "median": 0.0,
+            "p95": 0.0,
+            "n": 6
+          }
+        },
+        "B": {
+          "n_queries": 6,
+          "recall@5": {
+            "mean": 0.06635802469135803,
+            "ci95_low": 0.0,
+            "ci95_high": 0.1574074074074074,
+            "n": 6
+          },
+          "recall@10": {
+            "mean": 0.10002805836139168,
+            "ci95_low": 0.015151515151515152,
+            "ci95_high": 0.20987654320987656,
+            "n": 6
+          },
+          "recall@20": {
+            "mean": 0.14555274971941637,
+            "ci95_low": 0.041666666666666664,
+            "ci95_high": 0.2756734006734006,
+            "n": 6
+          },
+          "miss_rate": {
+            "mean": 0.283179012345679,
+            "ci95_low": 0.033179012345679014,
+            "ci95_high": 0.6041666666666666,
+            "n": 6
+          },
+          "selectivity": {
+            "mean": 0.5320733104238259,
+            "ci95_low": 0.34994272623138606,
+            "ci95_high": 0.7010595647193586,
+            "n": 6
+          },
+          "latency_ms": {
+            "median": 0.029333517886698246,
+            "p95": 0.04862526839133352,
+            "mean": 0.03157651129489144,
+            "n": 6
+          },
+          "topic_scoring_ms": {
+            "median": 0.005604495527222753,
+            "p95": 0.008864517440088093,
+            "n": 6
+          }
+        },
+        "D": {
+          "n_queries": 6,
+          "recall@5": {
+            "mean": 0.06635802469135803,
+            "ci95_low": 0.0,
+            "ci95_high": 0.1574074074074074,
+            "n": 6
+          },
+          "recall@10": {
+            "mean": 0.10002805836139168,
+            "ci95_low": 0.015151515151515152,
+            "ci95_high": 0.20987654320987656,
+            "n": 6
+          },
+          "recall@20": {
+            "mean": 0.14555274971941637,
+            "ci95_low": 0.041666666666666664,
+            "ci95_high": 0.2756734006734006,
+            "n": 6
+          },
+          "miss_rate": {
+            "mean": 0.283179012345679,
+            "ci95_low": 0.033179012345679014,
+            "ci95_high": 0.6041666666666666,
+            "n": 6
+          },
+          "selectivity": {
+            "mean": 0.5320733104238259,
+            "ci95_low": 0.34994272623138606,
+            "ci95_high": 0.7010595647193586,
+            "n": 6
+          },
+          "latency_ms": {
+            "median": 0.026729016099125147,
+            "p95": 0.04409349639900029,
+            "mean": 0.028826335134605568,
+            "n": 6
+          },
+          "topic_scoring_ms": {
+            "median": 0.005520501872524619,
+            "p95": 0.005656489520333707,
+            "n": 6
+          }
+        },
+        "E": {
+          "n_queries": 6,
+          "recall@5": {
+            "mean": 0.06635802469135803,
+            "ci95_low": 0.0,
+            "ci95_high": 0.1574074074074074,
+            "n": 6
+          },
+          "recall@10": {
+            "mean": 0.08487654320987655,
+            "ci95_low": 0.0,
+            "ci95_high": 0.20987654320987656,
+            "n": 6
+          },
+          "recall@20": {
+            "mean": 0.14555274971941637,
+            "ci95_low": 0.041666666666666664,
+            "ci95_high": 0.2756734006734006,
+            "n": 6
+          },
+          "miss_rate": {
+            "mean": 0.0,
+            "ci95_low": 0.0,
+            "ci95_high": 0.0,
+            "n": 6
+          },
+          "selectivity": {
+            "mean": 0.9558991981672395,
+            "ci95_low": 0.895189003436426,
+            "ci95_high": 0.9896907216494846,
+            "n": 6
+          },
+          "latency_ms": {
+            "median": 0.032832962460815907,
+            "p95": 0.04242722934577614,
+            "mean": 0.03523615305311978,
+            "n": 6
+          },
+          "topic_scoring_ms": {
+            "median": 0.003103981725871563,
+            "p95": 0.0032394746085628867,
+            "n": 6
+          }
+        }
+      }
+    },
+    "miss_attribution": {
+      "core_dev": {
+        "n_gold_missed_by_B": 46,
+        "n_queries_where_B_missed_any_gold": 24,
+        "routing_error_gold_in_E": 46,
+        "chunk_labeling_error_gold_missing_from_E": 0,
+        "definition": "For gold chunks absent from B's candidate set: in E = routing error (query did not select the gold chunk's topic node); not in E = chunk-labeling error (gold chunk was not in the oracle topic nodes)."
+      },
+      "core_test": {
+        "n_gold_missed_by_B": 82,
+        "n_queries_where_B_missed_any_gold": 28,
+        "routing_error_gold_in_E": 82,
+        "chunk_labeling_error_gold_missing_from_E": 0,
+        "definition": "For gold chunks absent from B's candidate set: in E = routing error (query did not select the gold chunk's topic node); not in E = chunk-labeling error (gold chunk was not in the oracle topic nodes)."
+      },
+      "extra": {
+        "n_gold_missed_by_B": 7,
+        "n_queries_where_B_missed_any_gold": 4,
+        "routing_error_gold_in_E": 7,
+        "chunk_labeling_error_gold_missing_from_E": 0,
+        "definition": "For gold chunks absent from B's candidate set: in E = routing error (query did not select the gold chunk's topic node); not in E = chunk-labeling error (gold chunk was not in the oracle topic nodes)."
+      }
+    },
+    "split_counts_eligible_queries": {
+      "core_dev": 55,
+      "core_test": 68,
+      "extra": 6
+    }
+  },
+  "timing": {
+    "n_queries_timed": 1000,
+    "warmup": 20,
+    "real_corpus_size": 8464,
+    "settings": [
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "thread_control": {
+          "requested_threads": 1,
+          "threadpoolctl": true,
+          "torch_num_threads": 1,
+          "faiss_threads": 1
+        },
+        "latency_ms": {
+          "median": 0.06616697646677494,
+          "p95": 0.0784482108429074,
+          "mean": 0.06841816246742383,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.05,
+        "subset_size": 423,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.004832982085645199,
+          "p95": 0.005082983989268541,
+          "mean": 0.004822727758437395,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.1,
+        "subset_size": 846,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.006040965672582388,
+          "p95": 0.00637496414128691,
+          "mean": 0.00616375170648098,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.25,
+        "subset_size": 2116,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.01033296575769782,
+          "p95": 0.011041993275284767,
+          "mean": 0.010327542724553496,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.5,
+        "subset_size": 4232,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.01752050593495369,
+          "p95": 0.018167018424719572,
+          "mean": 0.0171518754796125,
+          "n": 1000
+        }
+      },
+      {
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 32,
+        "N": 8464,
+        "build_ms": 320.7467499887571,
+        "status": "ok",
+        "latency_ms": {
+          "median": 0.024604523787274957,
+          "p95": 0.03187913389410823,
+          "mean": 0.024716774409171194,
+          "n": 1000
+        },
+        "filtered": false,
+        "selectivity": 1.0,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1
+      },
+      {
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 128,
+        "N": 8464,
+        "build_ms": 320.7467499887571,
+        "status": "ok",
+        "latency_ms": {
+          "median": 0.08025002898648381,
+          "p95": 0.09758299274835736,
+          "mean": 0.07989491982152686,
+          "n": 1000
+        },
+        "filtered": false,
+        "selectivity": 1.0,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "single_thread",
+        "n_threads": 1
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "thread_control": {
+          "requested_threads": 1,
+          "threadpoolctl": true,
+          "torch_num_threads": 1,
+          "faiss_threads": 1
+        },
+        "latency_ms": {
+          "median": 2.146062528481707,
+          "p95": 2.328100029262714,
+          "mean": 2.1729612328344956,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.05,
+        "subset_size": 5000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.019958504708483815,
+          "p95": 0.020666042109951377,
+          "mean": 0.019341462466400117,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.1,
+        "subset_size": 10000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.12181251076981425,
+          "p95": 0.13688326871488243,
+          "mean": 0.12485215900233015,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.25,
+        "subset_size": 25000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.5420415254775435,
+          "p95": 0.6269642821280286,
+          "mean": 0.5503049735561945,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.5,
+        "subset_size": 50000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 1.0757505078800023,
+          "p95": 1.242695774999447,
+          "mean": 1.0997940594679676,
+          "n": 1000
+        }
+      },
+      {
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 32,
+        "N": 100000,
+        "build_ms": 7813.810291991103,
+        "status": "ok",
+        "latency_ms": {
+          "median": 0.025374989490956068,
+          "p95": 0.044236003304831656,
+          "mean": 0.027116807061247528,
+          "n": 1000
+        },
+        "filtered": false,
+        "selectivity": 1.0,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1
+      },
+      {
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 128,
+        "N": 100000,
+        "build_ms": 7813.810291991103,
+        "status": "ok",
+        "latency_ms": {
+          "median": 0.11706200893968344,
+          "p95": 0.20102711569052187,
+          "mean": 0.12364188820356503,
+          "n": 1000
+        },
+        "filtered": false,
+        "selectivity": 1.0,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "single_thread",
+        "n_threads": 1
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "thread_control": {
+          "requested_threads": 1,
+          "threadpoolctl": true,
+          "torch_num_threads": 1,
+          "faiss_threads": 1
+        },
+        "latency_ms": {
+          "median": 21.82027100934647,
+          "p95": 23.000760085415095,
+          "mean": 22.06327299895929,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.05,
+        "subset_size": 50000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 1.0768540378194302,
+          "p95": 1.229539592168294,
+          "mean": 1.0978827164508402,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.1,
+        "subset_size": 100000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 2.1471669897437096,
+          "p95": 2.356058362056501,
+          "mean": 2.1776291254209355,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.25,
+        "subset_size": 250000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 5.402792012318969,
+          "p95": 5.638880960759707,
+          "mean": 5.546255080786068,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.5,
+        "subset_size": 500000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 10.91527150128968,
+          "p95": 11.215215222910047,
+          "mean": 10.943347998487297,
+          "n": 1000
+        }
+      },
+      {
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 32,
+        "N": 1000000,
+        "build_ms": 71223.07545802323,
+        "status": "ok",
+        "latency_ms": {
+          "median": 0.022374966647475958,
+          "p95": 0.04492324078455567,
+          "mean": 0.02574112918227911,
+          "n": 1000
+        },
+        "filtered": false,
+        "selectivity": 1.0,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1
+      },
+      {
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 128,
+        "N": 1000000,
+        "build_ms": 71223.07545802323,
+        "status": "ok",
+        "latency_ms": {
+          "median": 0.08085448644123971,
+          "p95": 0.1609919971087947,
+          "mean": 0.08898550021694973,
+          "n": 1000
+        },
+        "filtered": false,
+        "selectivity": 1.0,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "single_thread",
+        "n_threads": 1
+      },
+      {
+        "status": "ok",
+        "method": "topic_scoring_overhead",
+        "n_nodes": 18,
+        "N": null,
+        "synthetic": false,
+        "threads": "single_thread",
+        "n_threads": 1,
+        "latency_ms": {
+          "median": 0.0017919810488820076,
+          "p95": 0.0019169528968632221,
+          "mean": 0.00177751702722162,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "thread_control": {
+          "requested_threads": 10,
+          "threadpoolctl": true,
+          "torch_num_threads": 10,
+          "faiss_threads": 10
+        },
+        "latency_ms": {
+          "median": 0.05979201523587108,
+          "p95": 0.06929523660801351,
+          "mean": 0.06173253239830956,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.05,
+        "subset_size": 423,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.004708999767899513,
+          "p95": 0.004916975740343332,
+          "mean": 0.0046984454384073615,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.1,
+        "subset_size": 846,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.005999987479299307,
+          "p95": 0.006416987162083387,
+          "mean": 0.0060503106215037405,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.25,
+        "subset_size": 2116,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.010124989785254002,
+          "p95": 0.010582970571704209,
+          "mean": 0.010054650658275932,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.5,
+        "subset_size": 4232,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.01745900954119861,
+          "p95": 0.18783122650347642,
+          "mean": 0.03550251718843356,
+          "n": 1000
+        }
+      },
+      {
+        "status": "failed",
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 32,
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "error": "Skipped FAISS HNSW for all_threads N=8464: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+      },
+      {
+        "status": "failed",
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 128,
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 8464,
+        "synthetic": false,
+        "label": "real_N=8464",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "error": "Skipped FAISS HNSW for all_threads N=8464: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "thread_control": {
+          "requested_threads": 10,
+          "threadpoolctl": true,
+          "torch_num_threads": 10,
+          "faiss_threads": 10
+        },
+        "latency_ms": {
+          "median": 2.1503749885596335,
+          "p95": 2.3384496482321993,
+          "mean": 2.1756131837610155,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.05,
+        "subset_size": 5000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.020291481632739305,
+          "p95": 0.02120806893799454,
+          "mean": 0.01962105295388028,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.1,
+        "subset_size": 10000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.11133297812193632,
+          "p95": 0.1314663386438042,
+          "mean": 0.11513839766848832,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.25,
+        "subset_size": 25000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.5395000334829092,
+          "p95": 0.5982077214866877,
+          "mean": 0.5485147900180891,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.5,
+        "subset_size": 50000,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 1.0734374809544533,
+          "p95": 1.2294288433622569,
+          "mean": 1.095239580841735,
+          "n": 1000
+        }
+      },
+      {
+        "status": "failed",
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 32,
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "error": "Skipped FAISS HNSW for all_threads N=100000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+      },
+      {
+        "status": "failed",
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 128,
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 100000,
+        "synthetic": true,
+        "label": "synthetic_N=100000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "error": "Skipped FAISS HNSW for all_threads N=100000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "thread_control": {
+          "requested_threads": 10,
+          "threadpoolctl": true,
+          "torch_num_threads": 10,
+          "faiss_threads": 10
+        },
+        "latency_ms": {
+          "median": 21.803458483191207,
+          "p95": 23.324897279962894,
+          "mean": 21.986892884538975,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.05,
+        "subset_size": 50000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 1.0785204940475523,
+          "p95": 1.2495271250372753,
+          "mean": 1.1061697180266492,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.1,
+        "subset_size": 100000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 2.1461040305439383,
+          "p95": 2.3249160643899813,
+          "mean": 2.172146921569947,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.25,
+        "subset_size": 250000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 5.395416490500793,
+          "p95": 5.702905901125631,
+          "mean": 5.450848474749364,
+          "n": 1000
+        }
+      },
+      {
+        "status": "ok",
+        "method": "exact_numpy_matmul",
+        "filtered": true,
+        "selectivity": 0.5,
+        "subset_size": 500000,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 10.943957982817665,
+          "p95": 12.03632674005348,
+          "mean": 11.192798535746988,
+          "n": 1000
+        }
+      },
+      {
+        "status": "failed",
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 32,
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "error": "Skipped FAISS HNSW for all_threads N=1000000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+      },
+      {
+        "status": "failed",
+        "method": "faiss_hnsw",
+        "M": 32,
+        "efSearch": 128,
+        "filtered": false,
+        "selectivity": 1.0,
+        "N": 1000000,
+        "synthetic": true,
+        "label": "synthetic_N=1000000",
+        "threads": "all_threads",
+        "n_threads": 10,
+        "error": "Skipped FAISS HNSW for all_threads N=1000000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139)."
+      },
+      {
+        "status": "ok",
+        "method": "topic_scoring_overhead",
+        "n_nodes": 18,
+        "N": null,
+        "synthetic": false,
+        "threads": "all_threads",
+        "n_threads": 10,
+        "latency_ms": {
+          "median": 0.0018749851733446121,
+          "p95": 0.0019579892978072166,
+          "mean": 0.0018253293819725513,
+          "n": 1000
+        }
+      }
+    ],
+    "savings_filtered_vs_unfiltered_exact": [
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "single_thread",
+        "selectivity": 0.05,
+        "unfiltered_median_ms": 0.06616697646677494,
+        "filtered_median_ms": 0.004832982085645199,
+        "saving_ms": 0.06133399438112974,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "single_thread",
+        "selectivity": 0.1,
+        "unfiltered_median_ms": 0.06616697646677494,
+        "filtered_median_ms": 0.006040965672582388,
+        "saving_ms": 0.06012601079419255,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "single_thread",
+        "selectivity": 0.25,
+        "unfiltered_median_ms": 0.06616697646677494,
+        "filtered_median_ms": 0.01033296575769782,
+        "saving_ms": 0.05583401070907712,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "single_thread",
+        "selectivity": 0.5,
+        "unfiltered_median_ms": 0.06616697646677494,
+        "filtered_median_ms": 0.01752050593495369,
+        "saving_ms": 0.04864647053182125,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.05,
+        "unfiltered_median_ms": 2.146062528481707,
+        "filtered_median_ms": 0.019958504708483815,
+        "saving_ms": 2.126104023773223,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.1,
+        "unfiltered_median_ms": 2.146062528481707,
+        "filtered_median_ms": 0.12181251076981425,
+        "saving_ms": 2.0242500177118927,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.25,
+        "unfiltered_median_ms": 2.146062528481707,
+        "filtered_median_ms": 0.5420415254775435,
+        "saving_ms": 1.6040210030041635,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.5,
+        "unfiltered_median_ms": 2.146062528481707,
+        "filtered_median_ms": 1.0757505078800023,
+        "saving_ms": 1.0703120206017047,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.05,
+        "unfiltered_median_ms": 21.82027100934647,
+        "filtered_median_ms": 1.0768540378194302,
+        "saving_ms": 20.74341697152704,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.1,
+        "unfiltered_median_ms": 21.82027100934647,
+        "filtered_median_ms": 2.1471669897437096,
+        "saving_ms": 19.67310401960276,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.25,
+        "unfiltered_median_ms": 21.82027100934647,
+        "filtered_median_ms": 5.402792012318969,
+        "saving_ms": 16.4174789970275,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "single_thread",
+        "selectivity": 0.5,
+        "unfiltered_median_ms": 21.82027100934647,
+        "filtered_median_ms": 10.91527150128968,
+        "saving_ms": 10.90499950805679,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "all_threads",
+        "selectivity": 0.05,
+        "unfiltered_median_ms": 0.05979201523587108,
+        "filtered_median_ms": 0.004708999767899513,
+        "saving_ms": 0.05508301546797156,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "all_threads",
+        "selectivity": 0.1,
+        "unfiltered_median_ms": 0.05979201523587108,
+        "filtered_median_ms": 0.005999987479299307,
+        "saving_ms": 0.05379202775657177,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "all_threads",
+        "selectivity": 0.25,
+        "unfiltered_median_ms": 0.05979201523587108,
+        "filtered_median_ms": 0.010124989785254002,
+        "saving_ms": 0.049667025450617075,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 8464,
+        "synthetic": false,
+        "threads": "all_threads",
+        "selectivity": 0.5,
+        "unfiltered_median_ms": 0.05979201523587108,
+        "filtered_median_ms": 0.01745900954119861,
+        "saving_ms": 0.042333005694672465,
+        "exceeds_1ms": false
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.05,
+        "unfiltered_median_ms": 2.1503749885596335,
+        "filtered_median_ms": 0.020291481632739305,
+        "saving_ms": 2.130083506926894,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.1,
+        "unfiltered_median_ms": 2.1503749885596335,
+        "filtered_median_ms": 0.11133297812193632,
+        "saving_ms": 2.039042010437697,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.25,
+        "unfiltered_median_ms": 2.1503749885596335,
+        "filtered_median_ms": 0.5395000334829092,
+        "saving_ms": 1.6108749550767243,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 100000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.5,
+        "unfiltered_median_ms": 2.1503749885596335,
+        "filtered_median_ms": 1.0734374809544533,
+        "saving_ms": 1.0769375076051801,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.05,
+        "unfiltered_median_ms": 21.803458483191207,
+        "filtered_median_ms": 1.0785204940475523,
+        "saving_ms": 20.724937989143655,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.1,
+        "unfiltered_median_ms": 21.803458483191207,
+        "filtered_median_ms": 2.1461040305439383,
+        "saving_ms": 19.65735445264727,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.25,
+        "unfiltered_median_ms": 21.803458483191207,
+        "filtered_median_ms": 5.395416490500793,
+        "saving_ms": 16.408041992690414,
+        "exceeds_1ms": true
+      },
+      {
+        "N": 1000000,
+        "synthetic": true,
+        "threads": "all_threads",
+        "selectivity": 0.5,
+        "unfiltered_median_ms": 21.803458483191207,
+        "filtered_median_ms": 10.943957982817665,
+        "saving_ms": 10.859500500373542,
+        "exceeds_1ms": true
+      }
+    ],
+    "where_saving_exceeds_1ms": {
+      "min_N": 100000,
+      "examples": [
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.05,
+          "unfiltered_median_ms": 2.146062528481707,
+          "filtered_median_ms": 0.019958504708483815,
+          "saving_ms": 2.126104023773223,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.1,
+          "unfiltered_median_ms": 2.146062528481707,
+          "filtered_median_ms": 0.12181251076981425,
+          "saving_ms": 2.0242500177118927,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.25,
+          "unfiltered_median_ms": 2.146062528481707,
+          "filtered_median_ms": 0.5420415254775435,
+          "saving_ms": 1.6040210030041635,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.5,
+          "unfiltered_median_ms": 2.146062528481707,
+          "filtered_median_ms": 1.0757505078800023,
+          "saving_ms": 1.0703120206017047,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.05,
+          "unfiltered_median_ms": 21.82027100934647,
+          "filtered_median_ms": 1.0768540378194302,
+          "saving_ms": 20.74341697152704,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.1,
+          "unfiltered_median_ms": 21.82027100934647,
+          "filtered_median_ms": 2.1471669897437096,
+          "saving_ms": 19.67310401960276,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.25,
+          "unfiltered_median_ms": 21.82027100934647,
+          "filtered_median_ms": 5.402792012318969,
+          "saving_ms": 16.4174789970275,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "single_thread",
+          "selectivity": 0.5,
+          "unfiltered_median_ms": 21.82027100934647,
+          "filtered_median_ms": 10.91527150128968,
+          "saving_ms": 10.90499950805679,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.05,
+          "unfiltered_median_ms": 2.1503749885596335,
+          "filtered_median_ms": 0.020291481632739305,
+          "saving_ms": 2.130083506926894,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.1,
+          "unfiltered_median_ms": 2.1503749885596335,
+          "filtered_median_ms": 0.11133297812193632,
+          "saving_ms": 2.039042010437697,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.25,
+          "unfiltered_median_ms": 2.1503749885596335,
+          "filtered_median_ms": 0.5395000334829092,
+          "saving_ms": 1.6108749550767243,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 100000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.5,
+          "unfiltered_median_ms": 2.1503749885596335,
+          "filtered_median_ms": 1.0734374809544533,
+          "saving_ms": 1.0769375076051801,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.05,
+          "unfiltered_median_ms": 21.803458483191207,
+          "filtered_median_ms": 1.0785204940475523,
+          "saving_ms": 20.724937989143655,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.1,
+          "unfiltered_median_ms": 21.803458483191207,
+          "filtered_median_ms": 2.1461040305439383,
+          "saving_ms": 19.65735445264727,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.25,
+          "unfiltered_median_ms": 21.803458483191207,
+          "filtered_median_ms": 5.395416490500793,
+          "saving_ms": 16.408041992690414,
+          "exceeds_1ms": true
+        },
+        {
+          "N": 1000000,
+          "synthetic": true,
+          "threads": "all_threads",
+          "selectivity": 0.5,
+          "unfiltered_median_ms": 21.803458483191207,
+          "filtered_median_ms": 10.943957982817665,
+          "saving_ms": 10.859500500373542,
+          "exceeds_1ms": true
+        }
+      ],
+      "note": "Smallest N among completed settings where median filtered exact search was >1 ms faster than unfiltered exact."
+    },
+    "failures": [
+      "Skipped FAISS HNSW for all_threads N=8464: a previous all-threads HNSW run aborted this process with a native segfault (exit 139).",
+      "Skipped FAISS HNSW for all_threads N=100000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139).",
+      "Skipped FAISS HNSW for all_threads N=1000000: a previous all-threads HNSW run aborted this process with a native segfault (exit 139).",
+      "Original all-threads pass crashed after real_N exact/filtered; remaining all-threads settings were resumed in a new process."
+    ],
+    "resumed_all_threads": true
+  },
+  "diagnostics": {
+    "routing": {
+      "per_question": [
+        {
+          "question": "Do the environmental/sustainability targets set by the company align with external climate change adaptation goals/targets?",
+          "set_type": "core",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6676839590072632,
+          "top_pillar": "G",
+          "top_pillar_name": "Governance",
+          "top_pillar_cosine": 0.6455695033073425
+        },
+        {
+          "question": "Do the environmental/sustainability targets set by the company reference external climate change adaptation goals/targets?",
+          "set_type": "core",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.680306077003479,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6491615772247314
+        },
+        {
+          "question": "Does the company demonstrate alignment of its business strategy with relevant regional- or national-level climate change adaptation plans?",
+          "set_type": "extra",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6556922793388367,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6561598777770996
+        },
+        {
+          "question": "Does the company encourage downstream partners to carry out climate-related risk assessments?",
+          "set_type": "core",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.6896348595619202,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.62621009349823
+        },
+        {
+          "question": "Does the company have a specific process in place to identify risks arising from climate change?",
+          "set_type": "core",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.7794871926307678,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6687880754470825
+        },
+        {
+          "question": "Does the company have a strategy on waste management?",
+          "set_type": "core",
+          "top_leaf": "e_waste",
+          "top_leaf_name": "Waste and circularity",
+          "top_leaf_cosine": 0.6603278517723083,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6027153134346008
+        },
+        {
+          "question": "Does the company have any engagements with industry peers in relation to climate change?",
+          "set_type": "core",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.5942588448524475,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6681948900222778
+        },
+        {
+          "question": "Does the company identify any impacts of its business activities on the environment?",
+          "set_type": "core",
+          "top_leaf": "s_community",
+          "top_leaf_name": "Community",
+          "top_leaf_cosine": 0.6641820669174194,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.7102199792861938
+        },
+        {
+          "question": "Does the company provide definitions for climate change adaptation?",
+          "set_type": "core",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6768131852149963,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6723847985267639
+        },
+        {
+          "question": "Does the company refer to any third party scenarios when identifying climate-related risks or opportunities (e.g. IPCC trajectories, NGFS scenarios, etc.)?",
+          "set_type": "core",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.7400749325752258,
+          "top_pillar": "G",
+          "top_pillar_name": "Governance",
+          "top_pillar_cosine": 0.6449862122535706
+        },
+        {
+          "question": "Does the company report a plan to engage with downstream partners on water consumption or water pollution?",
+          "set_type": "core",
+          "top_leaf": "e_water",
+          "top_leaf_name": "Water",
+          "top_leaf_cosine": 0.7310208678245544,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.5928294658660889
+        },
+        {
+          "question": "Does the company report a set of metrics to measure its progress on adapting to the impacts of climate change? ",
+          "set_type": "extra",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6729373931884766,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6223863959312439
+        },
+        {
+          "question": "Does the company report a set of metrics to measure its progress on reducing its impact on biodiversity?",
+          "set_type": "extra",
+          "top_leaf": "e_biodiversity",
+          "top_leaf_name": "Biodiversity",
+          "top_leaf_cosine": 0.6133859753608704,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.5947843790054321
+        },
+        {
+          "question": "Does the company report a strategy and activities to significantly reduce the negative ecological impact of its activities?",
+          "set_type": "extra",
+          "top_leaf": "e_waste",
+          "top_leaf_name": "Waste and circularity",
+          "top_leaf_cosine": 0.6203399300575256,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6564970016479492
+        },
+        {
+          "question": "Does the company report a strategy and activities to significantly reduce water consumption and pollution?",
+          "set_type": "extra",
+          "top_leaf": "e_water",
+          "top_leaf_name": "Water",
+          "top_leaf_cosine": 0.6774803400039673,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6300891637802124
+        },
+        {
+          "question": "Does the company report how adjustments to its business operations will allow it to adapt to climate change?",
+          "set_type": "core",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6555498242378235,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6457675695419312
+        },
+        {
+          "question": "Does the company report policies and guidelines in place to ensure employees uphold the principle of \u2018Do no significant harm\u2019 across business activities?",
+          "set_type": "extra",
+          "top_leaf": "g_ethics",
+          "top_leaf_name": "Ethics",
+          "top_leaf_cosine": 0.7422689199447632,
+          "top_pillar": "G",
+          "top_pillar_name": "Governance",
+          "top_pillar_cosine": 0.5759325623512268
+        },
+        {
+          "question": "Does the company report short-term actions taken or planned to reduce its waste generation?",
+          "set_type": "core",
+          "top_leaf": "e_waste",
+          "top_leaf_name": "Waste and circularity",
+          "top_leaf_cosine": 0.7355645895004272,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.5958759784698486
+        },
+        {
+          "question": "Does the company report the assets and revenue streams at risk of losing value due to climate change?",
+          "set_type": "extra",
+          "top_leaf": "e_transition_risk",
+          "top_leaf_name": "Transition risk",
+          "top_leaf_cosine": 0.6803632378578186,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6229872703552246
+        },
+        {
+          "question": "Does the company report the climate change scenarios used to test the resilience of its business strategy?",
+          "set_type": "core",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.6740279793739319,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6631050705909729
+        },
+        {
+          "question": "Does the company report the methodology used to identify the dependencies and impact of its business activities on the environment?",
+          "set_type": "core",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.6401283740997314,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6462680697441101
+        },
+        {
+          "question": "Does the company report the methodology used to identify the key risks and opportunities of climate change to its business activities?",
+          "set_type": "extra",
+          "top_leaf": "g_risk_management",
+          "top_leaf_name": "Risk management",
+          "top_leaf_cosine": 0.7408272624015808,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6764242649078369
+        },
+        {
+          "question": "Does the company seek to adjust its business model to better provide climate change adaptation products and services?",
+          "set_type": "core",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6626111268997192,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6331037282943726
+        },
+        {
+          "question": "Does the company state how it will engage with upstream and downstream partners to advance adaptation to climate change across the value chain? (or \u2026to make its value chain more resilient to the impacts of climate change?)",
+          "set_type": "extra",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.665776789188385,
+          "top_pillar": "S",
+          "top_pillar_name": "Social",
+          "top_pillar_cosine": 0.6524369120597839
+        },
+        {
+          "question": "Has the company identified any synergies between its climate change adaptation goals and other business goals?",
+          "set_type": "core",
+          "top_leaf": "e_climate_adaptation",
+          "top_leaf_name": "Climate adaptation",
+          "top_leaf_cosine": 0.6772321462631226,
+          "top_pillar": "E",
+          "top_pillar_name": "Environmental",
+          "top_pillar_cosine": 0.6547791957855225
+        },
+        {
+          "question": "What are Scope 1 emissions?",
+          "set_type": "extra",
+          "top_leaf": "e_ghg_emissions",
+          "top_leaf_name": "GHG emissions",
+          "top_leaf_cosine": 0.6783344149589539,
+          "top_pillar": "G",
+          "top_pillar_name": "Governance",
+          "top_pillar_cosine": 0.5255074501037598
+        }
+      ],
+      "core": {
+        "n_questions": 16,
+        "distinct_pillars": [
+          "E",
+          "G"
+        ],
+        "n_distinct_pillars": 2,
+        "pillar_counts": {
+          "E": 14,
+          "G": 2
+        },
+        "n_questions_sharing_the_modal_pillar": 14,
+        "modal_pillar": "E"
+      },
+      "extra": {
+        "n_questions": 10,
+        "distinct_pillars": [
+          "E",
+          "G",
+          "S"
+        ],
+        "n_distinct_pillars": 3,
+        "pillar_counts": {
+          "E": 7,
+          "G": 2,
+          "S": 1
+        },
+        "n_questions_sharing_the_modal_pillar": 7,
+        "modal_pillar": "E"
+      },
+      "all": {
+        "n_questions": 26,
+        "n_distinct_pillars": 3,
+        "pillar_counts": {
+          "E": 21,
+          "G": 4,
+          "S": 1
+        }
+      }
+    },
+    "chunk_assignment": {
+      "chunks_per_leaf": {
+        "e_physical_climate_risk": 768,
+        "e_transition_risk": 570,
+        "e_climate_adaptation": 1160,
+        "e_ghg_emissions": 3525,
+        "e_energy": 1706,
+        "e_water": 1742,
+        "e_biodiversity": 766,
+        "e_waste": 1957,
+        "s_workforce": 2072,
+        "s_health_safety": 2532,
+        "s_community": 3211,
+        "g_board_oversight": 1031,
+        "g_risk_management": 1594,
+        "g_ethics": 465
+      },
+      "mean_leaves_per_chunk": 2.729087901701323,
+      "min_leaves_per_chunk": 1,
+      "max_leaves_per_chunk": 14,
+      "n_chunks": 8464
+    }
+  },
+  "notes": [
+    "Dropped 15 report-level rows with null/empty paragraph (raw rows=47941).",
+    "Report-level relevance has 9 NaN values. After max-aggregating per (report, question, paragraph), pairs whose only values are NaN are omitted from qrels.",
+    "Query set_type is tagged from ClimRetrieve_base 'Core 16 Question' (max flag per Question text). It matches Core_Questions_with_Explanations.xlsx.",
+    "Exact-text dedup within a report collapsed 1 paragraph text(s) that had more than one original row index.",
+    "Expert-base (Document, Question) pairs absent from report-level (1): [('2022_BXP_ESG_Report.pdf', 'Does the company provide definitions for climate change adaptation?')].",
+    "FAISS HNSW with all threads (omp>1) aborted with a native segfault (exit 139) on this machine; HNSW latencies are single-thread only. Exact numpy timings exist for both thread modes."
+  ],
+  "caveats": [
+    "Synthetic scale-up embeddings are real vectors plus Gaussian noise, then re-normalized; those N values are labeled synthetic in the JSON.",
+    "Primary test set is 8 core questions only (queries are those questions asked on reports with gold at relevance \u2265 2).",
+    "All ClimRetrieve questions are climate-related, so topic routing may collapse onto a small number of pillars/leaves.",
+    "Chunk topic labels are automatic cosine assignments and have not been human-verified (config C is out of scope).",
+    "\u03bb and \u03c4 were chosen on core-dev; core-dev tables are tuning data, not a held-out estimate.",
+    "Core-test and extra numbers are never pooled.",
+    "FAISS multi-thread HNSW crashed natively; that comparison is missing from all-threads results."
+  ]
+}
